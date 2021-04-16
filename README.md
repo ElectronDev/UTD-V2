@@ -1,6 +1,5 @@
-# UTD-V2
-Glorified Clock.
-
+# Univeral Time Display Version 2
+Second version of the glorified clock, no longer discriminates against anyone who isn't in the BST/GMT timezones!
 ## Next Update features:
 > None Planned
 ## Features:
