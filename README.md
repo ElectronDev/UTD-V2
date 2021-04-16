@@ -9,6 +9,8 @@ Glorified Clock.
 > 3. This is literally just an over-engineered clock, i have no idea what else to say lmfao
 
 ## Found a bug? Create an issue [here](https://github.com/ElectronDevDude/UTD-V2/issues)
+### Is this safe?
+[yes.](https://media.discordapp.net/attachments/443488569932120064/832699138092957716/unknown.png)
 ### Is this probably super inefficient?
 yes.
 ### Do websites exist which do the exact same thing?
