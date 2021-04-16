@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-
 namespace TimeThing
 {
     public partial class Form1 : Form
@@ -139,6 +138,16 @@ namespace TimeThing
             Properties.Settings.Default.Save();
             OffsetAddBtn.Enabled = true;
             if (!CurrentTimeCheckBox.Checked) { Program.TM.refresh(); }
+        }
+
+        private void ProgramName_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://github.com/ElectronDevDude/UTD-V2") { UseShellExecute = true });
+        }
+
+        private void Copyright_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://github.com/ElectronDevDude/UTD-V2/blob/master/LICENSE") { UseShellExecute = true });
         }
     }
 }
