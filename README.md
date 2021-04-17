@@ -1,6 +1,5 @@
-# UTD-V2
-Glorified Clock.
-
+# Univeral Time Display Version 2
+Second version of the glorified clock, no longer discriminates against anyone who isn't in the BST/GMT timezones!
 ## Next Update features:
 > None Planned
 ## Features:
@@ -10,6 +9,8 @@ Glorified Clock.
 > 4. This is literally just an over-engineered clock, i have no idea what else to say lmfao
 
 ## Found a bug? Create an issue [here](https://github.com/ElectronDevDude/UTD-V2/issues)
+### Is this safe?
+[yes.](https://media.discordapp.net/attachments/443488569932120064/832699138092957716/unknown.png)
 ### Is this probably super inefficient?
 yes.
 ### Do websites exist which do the exact same thing?
