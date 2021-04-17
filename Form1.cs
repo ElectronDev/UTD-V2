@@ -70,7 +70,9 @@ namespace TimeThing
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.TM.stopclock();
-            Program.WidgetForm.Close();
+            if (!Program.WidgetForm.IsDisposed)
+            Program.WidgetForm.Dispose();
+            Program.PrimaryForm.Dispose();
         }
 
         private void twentyfourmode_CheckedChanged(object sender, EventArgs e)

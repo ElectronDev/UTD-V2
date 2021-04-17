@@ -10,7 +10,7 @@ namespace TimeThing
     public static class Program
     {
         public static Form1 PrimaryForm;
-        public static WidgetFormClass WidgetForm;
+        public static WidgetFormClass WidgetForm = new WidgetFormClass();
         public static TimeManager TM = new TimeManager();
         [STAThread]
         static void Main()
@@ -18,6 +18,7 @@ namespace TimeThing
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            TM.lastdate = DateTime.UtcNow;
             Application.Run(PrimaryForm = new Form1());
         }
     }
@@ -55,8 +56,8 @@ namespace TimeThing
                 Program.WidgetForm.OffsetTimeDisplay.Text = OTD;
                 Program.WidgetForm.OffsetTrackBar.Value = OTB;
             });
-            if (Program.PrimaryForm.Visible) { Program.PrimaryForm.Invoke(PMinvoke); }
-            else { Program.WidgetForm.Invoke(WFinvoke); }
+            if (!Program.PrimaryForm.IsDisposed && Program.PrimaryForm.Visible) { Program.PrimaryForm.Invoke(PMinvoke); }
+            if (!Program.WidgetForm.IsDisposed && Program.WidgetForm.Visible) { Program.WidgetForm.Invoke(WFinvoke); }
         }
         private void istartclock()
         {
