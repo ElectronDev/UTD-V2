@@ -40,7 +40,7 @@ namespace TimeThing
             Program.TM.Conversions.Add(-10, "CKT, HAST, HST, TAHT");
             Program.TM.Conversions.Add(-11, "NUT, SST Samoa");
             Program.TM.Conversions.Add(-12, "BIT");
-            LBTZ.Text = "Base Timezone: "+ Properties.Settings.Default.BaseTimeZone.ToString() + " UTC"; ;
+            LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
             LTZD.Text = Program.TM.Conversions[Properties.Settings.Default.BaseTimeZone];
             OTZD.Text = Program.TM.Conversions[Properties.Settings.Default.OffsetTimeZone];
@@ -70,6 +70,7 @@ namespace TimeThing
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.TM.stopclock();
+            Program.WidgetForm.Close();
         }
 
         private void twentyfourmode_CheckedChanged(object sender, EventArgs e)
@@ -148,6 +149,13 @@ namespace TimeThing
         private void Copyright_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://github.com/ElectronDevDude/UTD-V2/blob/master/LICENSE") { UseShellExecute = true });
+        }
+
+        private void WidgetOpen_Click(object sender, EventArgs e)
+        {
+            Program.PrimaryForm.Hide();
+            Program.WidgetForm = new WidgetFormClass();
+            Program.WidgetForm.Show();
         }
     }
 }

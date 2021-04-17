@@ -52,6 +52,7 @@ namespace TimeThing
             this.OffsetSubBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.WidgetOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,7 +129,7 @@ namespace TimeThing
             this.Twentyfourmodecheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Twentyfourmodecheckbox.AutoSize = true;
             this.Twentyfourmodecheckbox.BackColor = System.Drawing.Color.Orange;
-            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(194, 429);
+            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 391);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
             this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(79, 19);
             this.Twentyfourmodecheckbox.TabIndex = 0;
@@ -240,7 +241,7 @@ namespace TimeThing
             this.LTZD.AutoSize = true;
             this.LTZD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LTZD.ForeColor = System.Drawing.Color.Orange;
-            this.LTZD.Location = new System.Drawing.Point(296, 156);
+            this.LTZD.Location = new System.Drawing.Point(296, 165);
             this.LTZD.Name = "LTZD";
             this.LTZD.Size = new System.Drawing.Size(45, 21);
             this.LTZD.TabIndex = 17;
@@ -323,6 +324,17 @@ namespace TimeThing
             this.label4.TabIndex = 24;
             this.label4.Text = "Offset Display:";
             // 
+            // WidgetOpen
+            // 
+            this.WidgetOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.WidgetOpen.Location = new System.Drawing.Point(187, 412);
+            this.WidgetOpen.Name = "WidgetOpen";
+            this.WidgetOpen.Size = new System.Drawing.Size(75, 42);
+            this.WidgetOpen.TabIndex = 25;
+            this.WidgetOpen.Text = "Swap to\r\nWidget";
+            this.WidgetOpen.UseVisualStyleBackColor = true;
+            this.WidgetOpen.Click += new System.EventHandler(this.WidgetOpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -330,6 +342,7 @@ namespace TimeThing
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 460);
+            this.Controls.Add(this.WidgetOpen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OffsetSubBtn);
@@ -371,7 +384,6 @@ namespace TimeThing
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LBTZ;
-        private System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
         private System.Windows.Forms.CheckBox CurrentTimeCheckBox;
         public System.Windows.Forms.Label UnixLabel;
         public System.Windows.Forms.Label OffsetTimeDisplay;
@@ -391,6 +403,8 @@ namespace TimeThing
         private System.Windows.Forms.Button OffsetSubBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button WidgetOpen;
+        public System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
     }
 }
 

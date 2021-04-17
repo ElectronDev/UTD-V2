@@ -10,6 +10,7 @@ namespace TimeThing
     public static class Program
     {
         public static Form1 PrimaryForm;
+        public static WidgetFormClass WidgetForm;
         public static TimeManager TM = new TimeManager();
         [STAThread]
         static void Main()
@@ -41,14 +42,21 @@ namespace TimeThing
             int LTB = (int)basetime.TimeOfDay.TotalSeconds;
             string OTD = offsettime.ToString(formatmode);
             int OTB = (int)offsettime.TimeOfDay.TotalSeconds;
-            MethodInvoker getValues = new MethodInvoker(delegate () {
+            MethodInvoker PMinvoke = new MethodInvoker(delegate () {
                 Program.PrimaryForm.UnixLabel.Text = unixsecs;
                 Program.PrimaryForm.LocalTimeDisplay.Text = LTD;
                 Program.PrimaryForm.LocalTrackBar.Value = LTB;
                 Program.PrimaryForm.OffsetTimeDisplay.Text = OTD;
                 Program.PrimaryForm.OffsetTrackBar.Value = OTB;
             });
-            Program.PrimaryForm.Invoke(getValues);
+            MethodInvoker WFinvoke = new MethodInvoker(delegate () {
+                Program.WidgetForm.LocalTimeDisplay.Text = LTD;
+                Program.WidgetForm.LocalTrackBar.Value = LTB;
+                Program.WidgetForm.OffsetTimeDisplay.Text = OTD;
+                Program.WidgetForm.OffsetTrackBar.Value = OTB;
+            });
+            if (Program.PrimaryForm.Visible) { Program.PrimaryForm.Invoke(PMinvoke); }
+            else { Program.WidgetForm.Invoke(WFinvoke); }
         }
         private void istartclock()
         {
