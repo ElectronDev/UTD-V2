@@ -31,7 +31,7 @@ namespace TimeThing
             {
                 hextras = myscreen.Bounds.Height - myscreen.WorkingArea.Height;
             }
-            Program.WidgetForm.Location = new Point(area.Size.Width-550+wextras,area.Size.Height-256+hextras);
+            Program.WidgetForm.Location = new Point(area.Size.Width-550+wextras,area.Size.Height-200+hextras);
             LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
         }
@@ -44,7 +44,7 @@ namespace TimeThing
             OBTZ.Visible=true;
             LBTZ.Visible=true;
             Twentyfourmodecheckbox.Visible = true;
-            Program.WidgetForm.Size = new Size(550, 300);
+            Program.WidgetForm.Size = new Size(550, 244);
             int wextras = 0;
             int hextras = 0;
             if (area.Left > 0)
@@ -55,7 +55,7 @@ namespace TimeThing
             {
                 hextras = myscreen.Bounds.Height - myscreen.WorkingArea.Height;
             }
-            Program.WidgetForm.Location = new Point(area.Size.Width - 550 + wextras, area.Size.Height - 300 + hextras);
+            Program.WidgetForm.Location = new Point(area.Size.Width - 550 + wextras, area.Size.Height - 244 + hextras);
             Program.WidgetForm.Opacity = 1.00;
         }
 
@@ -63,7 +63,7 @@ namespace TimeThing
         {
             Program.PrimaryForm.Invoke(new MethodInvoker(delegate () { Program.PrimaryForm.Twentyfourmodecheckbox.Checked = Properties.Settings.Default.twentyfourmode; }));
             Program.PrimaryForm.Show();
-            Program.WidgetForm.Hide();
+            Program.WidgetForm.Dispose();
         }
 
         private void Form1_MouseLeave(object sender, EventArgs e)
@@ -88,8 +88,8 @@ namespace TimeThing
                 Twentyfourmodecheckbox.Visible = false;
                 OBTZ.Visible=false;
                 LBTZ.Visible=false;
-                Program.WidgetForm.Size = new Size(550, 256);
-                Program.WidgetForm.Location = new Point(area.Size.Width - 550+wextras, area.Size.Height - 256+hextras);
+                Program.WidgetForm.Size = new Size(550, 200);
+                Program.WidgetForm.Location = new Point(area.Size.Width - 550+wextras, area.Size.Height - 200+hextras);
                 Program.WidgetForm.Opacity = 0.65;
             }
         }
@@ -97,6 +97,7 @@ namespace TimeThing
         private void WidgetFormClass_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.PrimaryForm.Show();
+            Program.WidgetForm.Dispose();
         }
         private void Twentyfourmodecheckbox_CheckedChanged(object sender, EventArgs e)
         {

@@ -69,7 +69,7 @@ namespace TimeThing
             this.OffsetTrackBar.Name = "OffsetTrackBar";
             this.OffsetTrackBar.Size = new System.Drawing.Size(959, 45);
             this.OffsetTrackBar.SmallChange = 3600;
-            this.OffsetTrackBar.TabIndex = 5;
+            this.OffsetTrackBar.TabIndex = 9;
             this.OffsetTrackBar.Value = 1;
             this.OffsetTrackBar.MouseCaptureChanged += new System.EventHandler(this.OffsetTrackBar_MouseCaptureChanged);
             // 
@@ -84,7 +84,7 @@ namespace TimeThing
             this.LocalTrackBar.Name = "LocalTrackBar";
             this.LocalTrackBar.Size = new System.Drawing.Size(967, 45);
             this.LocalTrackBar.SmallChange = 3600;
-            this.LocalTrackBar.TabIndex = 4;
+            this.LocalTrackBar.TabIndex = 8;
             this.LocalTrackBar.Value = 1;
             this.LocalTrackBar.MouseCaptureChanged += new System.EventHandler(this.LocalTrackBar_MouseCaptureChanged);
             // 
@@ -132,7 +132,7 @@ namespace TimeThing
             this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 391);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
             this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(79, 19);
-            this.Twentyfourmodecheckbox.TabIndex = 0;
+            this.Twentyfourmodecheckbox.TabIndex = 5;
             this.Twentyfourmodecheckbox.Text = "24h mode";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
             this.Twentyfourmodecheckbox.CheckedChanged += new System.EventHandler(this.twentyfourmode_CheckedChanged);
@@ -169,7 +169,7 @@ namespace TimeThing
             this.CurrentTimeCheckBox.Location = new System.Drawing.Point(294, 9);
             this.CurrentTimeCheckBox.Name = "CurrentTimeCheckBox";
             this.CurrentTimeCheckBox.Size = new System.Drawing.Size(100, 19);
-            this.CurrentTimeCheckBox.TabIndex = 6;
+            this.CurrentTimeCheckBox.TabIndex = 0;
             this.CurrentTimeCheckBox.Text = "Current Times";
             this.CurrentTimeCheckBox.UseVisualStyleBackColor = true;
             this.CurrentTimeCheckBox.CheckedChanged += new System.EventHandler(this.CurrentTime_CheckedChanged);
@@ -180,7 +180,7 @@ namespace TimeThing
             this.ResetButton.Location = new System.Drawing.Point(1180, 429);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(75, 23);
-            this.ResetButton.TabIndex = 8;
+            this.ResetButton.TabIndex = 7;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Visible = false;
@@ -264,7 +264,7 @@ namespace TimeThing
             this.BaseAddBtn.Location = new System.Drawing.Point(14, 141);
             this.BaseAddBtn.Name = "BaseAddBtn";
             this.BaseAddBtn.Size = new System.Drawing.Size(47, 23);
-            this.BaseAddBtn.TabIndex = 19;
+            this.BaseAddBtn.TabIndex = 1;
             this.BaseAddBtn.Text = "Add";
             this.BaseAddBtn.UseVisualStyleBackColor = true;
             this.BaseAddBtn.Click += new System.EventHandler(this.BaseAddBtn_Click);
@@ -275,7 +275,7 @@ namespace TimeThing
             this.OffsetAddBtn.Location = new System.Drawing.Point(12, 342);
             this.OffsetAddBtn.Name = "OffsetAddBtn";
             this.OffsetAddBtn.Size = new System.Drawing.Size(47, 23);
-            this.OffsetAddBtn.TabIndex = 20;
+            this.OffsetAddBtn.TabIndex = 3;
             this.OffsetAddBtn.Text = "Add";
             this.OffsetAddBtn.UseVisualStyleBackColor = true;
             this.OffsetAddBtn.Click += new System.EventHandler(this.OffsetAddBtn_Click);
@@ -285,7 +285,7 @@ namespace TimeThing
             this.BaseSubBtn.Location = new System.Drawing.Point(67, 141);
             this.BaseSubBtn.Name = "BaseSubBtn";
             this.BaseSubBtn.Size = new System.Drawing.Size(61, 23);
-            this.BaseSubBtn.TabIndex = 21;
+            this.BaseSubBtn.TabIndex = 2;
             this.BaseSubBtn.Text = "Subtract";
             this.BaseSubBtn.UseVisualStyleBackColor = true;
             this.BaseSubBtn.Click += new System.EventHandler(this.BaseSubBtn_Click);
@@ -296,7 +296,7 @@ namespace TimeThing
             this.OffsetSubBtn.Location = new System.Drawing.Point(65, 342);
             this.OffsetSubBtn.Name = "OffsetSubBtn";
             this.OffsetSubBtn.Size = new System.Drawing.Size(61, 23);
-            this.OffsetSubBtn.TabIndex = 22;
+            this.OffsetSubBtn.TabIndex = 4;
             this.OffsetSubBtn.Text = "Subtract";
             this.OffsetSubBtn.UseVisualStyleBackColor = true;
             this.OffsetSubBtn.Click += new System.EventHandler(this.OffsetSubBtn_Click);
@@ -330,7 +330,7 @@ namespace TimeThing
             this.WidgetOpen.Location = new System.Drawing.Point(187, 412);
             this.WidgetOpen.Name = "WidgetOpen";
             this.WidgetOpen.Size = new System.Drawing.Size(75, 42);
-            this.WidgetOpen.TabIndex = 25;
+            this.WidgetOpen.TabIndex = 6;
             this.WidgetOpen.Text = "Swap to\r\nWidget";
             this.WidgetOpen.UseVisualStyleBackColor = true;
             this.WidgetOpen.Click += new System.EventHandler(this.WidgetOpen_Click);

@@ -1,12 +1,14 @@
 # Univeral Time Display Version 2
 Second version of the glorified clock, no longer discriminates against anyone who isn't in the BST/GMT timezones!
 ## Next Update features:
-> None Planned
+> 1. Widget able to go onto other monitors
+> 2. Widget will be able to go to every corner of your screen!
 ## Features:
 > 1. See different times using buttons on the left of the screen!
 > 2. Change the bars in the middle of the window to view other times too!
 > 3. A simple widget which can display in the bottom-right corner of your screen! (In beta)
-> 4. This is literally just an over-engineered clock, i have no idea what else to say lmfao
+> 4. Uses the modern .NET 5 framework!
+> 5. This is literally just an over-engineered clock, i have no idea what else to say lmfao
 
 ## Found a bug? Create an issue [here](https://github.com/ElectronDevDude/UTD-V2/issues)
 ### Is this safe?

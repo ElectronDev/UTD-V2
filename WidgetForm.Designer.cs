@@ -41,6 +41,7 @@ namespace TimeThing
             this.OBTZ = new System.Windows.Forms.Label();
             this.LBTZ = new System.Windows.Forms.Label();
             this.Twentyfourmodecheckbox = new System.Windows.Forms.CheckBox();
+            this.Reposition = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +50,7 @@ namespace TimeThing
             // 
             this.ReturnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ReturnBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.ReturnBtn.Location = new System.Drawing.Point(463, 265);
+            this.ReturnBtn.Location = new System.Drawing.Point(463, 209);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(75, 23);
             this.ReturnBtn.TabIndex = 0;
@@ -63,7 +64,7 @@ namespace TimeThing
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 256);
+            this.splitter1.Location = new System.Drawing.Point(0, 200);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(550, 44);
             this.splitter1.TabIndex = 1;
@@ -149,7 +150,7 @@ namespace TimeThing
             this.OBTZ.AutoSize = true;
             this.OBTZ.BackColor = System.Drawing.Color.Orange;
             this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OBTZ.Location = new System.Drawing.Point(232, 265);
+            this.OBTZ.Location = new System.Drawing.Point(245, 214);
             this.OBTZ.Name = "OBTZ";
             this.OBTZ.Size = new System.Drawing.Size(161, 21);
             this.OBTZ.TabIndex = 31;
@@ -161,7 +162,7 @@ namespace TimeThing
             this.LBTZ.AutoSize = true;
             this.LBTZ.BackColor = System.Drawing.Color.Orange;
             this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LBTZ.Location = new System.Drawing.Point(12, 265);
+            this.LBTZ.Location = new System.Drawing.Point(54, 214);
             this.LBTZ.Name = "LBTZ";
             this.LBTZ.Size = new System.Drawing.Size(150, 21);
             this.LBTZ.TabIndex = 30;
@@ -170,25 +171,38 @@ namespace TimeThing
             // Twentyfourmodecheckbox
             // 
             this.Twentyfourmodecheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Twentyfourmodecheckbox.Appearance = System.Windows.Forms.Appearance.Button;
             this.Twentyfourmodecheckbox.AutoSize = true;
-            this.Twentyfourmodecheckbox.BackColor = System.Drawing.Color.Transparent;
-            this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.Silver;
-            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 231);
+            this.Twentyfourmodecheckbox.BackColor = System.Drawing.SystemColors.Control;
+            this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.Black;
+            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 210);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
-            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(79, 19);
+            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(36, 25);
             this.Twentyfourmodecheckbox.TabIndex = 32;
-            this.Twentyfourmodecheckbox.Text = "24h mode";
+            this.Twentyfourmodecheckbox.Text = "24h";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
             this.Twentyfourmodecheckbox.Visible = false;
             this.Twentyfourmodecheckbox.CheckedChanged += new System.EventHandler(this.Twentyfourmodecheckbox_CheckedChanged);
+            // 
+            // Reposition
+            // 
+            this.Reposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Reposition.Location = new System.Drawing.Point(515, 12);
+            this.Reposition.Name = "Reposition";
+            this.Reposition.Size = new System.Drawing.Size(23, 23);
+            this.Reposition.TabIndex = 33;
+            this.Reposition.Text = "↔️";
+            this.Reposition.UseVisualStyleBackColor = true;
+            this.Reposition.Visible = false;
             // 
             // WidgetFormClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(550, 300);
+            this.ClientSize = new System.Drawing.Size(550, 244);
             this.ControlBox = false;
+            this.Controls.Add(this.Reposition);
             this.Controls.Add(this.Twentyfourmodecheckbox);
             this.Controls.Add(this.OBTZ);
             this.Controls.Add(this.LBTZ);
@@ -232,6 +246,7 @@ namespace TimeThing
         private System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
         private System.Windows.Forms.Label LBTZ;
         private System.Windows.Forms.Label OBTZ;
+        private System.Windows.Forms.Button Reposition;
     }
 }
 
