@@ -50,10 +50,10 @@ namespace TimeThing
             // 
             this.ReturnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ReturnBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.ReturnBtn.Location = new System.Drawing.Point(463, 209);
+            this.ReturnBtn.Location = new System.Drawing.Point(482, 209);
             this.ReturnBtn.Name = "ReturnBtn";
-            this.ReturnBtn.Size = new System.Drawing.Size(75, 23);
-            this.ReturnBtn.TabIndex = 0;
+            this.ReturnBtn.Size = new System.Drawing.Size(56, 25);
+            this.ReturnBtn.TabIndex = 2;
             this.ReturnBtn.Text = "Return";
             this.ReturnBtn.UseVisualStyleBackColor = false;
             this.ReturnBtn.Click += new System.EventHandler(this.return_Click);
@@ -150,7 +150,7 @@ namespace TimeThing
             this.OBTZ.AutoSize = true;
             this.OBTZ.BackColor = System.Drawing.Color.Orange;
             this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OBTZ.Location = new System.Drawing.Point(245, 214);
+            this.OBTZ.Location = new System.Drawing.Point(195, 213);
             this.OBTZ.Name = "OBTZ";
             this.OBTZ.Size = new System.Drawing.Size(161, 21);
             this.OBTZ.TabIndex = 31;
@@ -162,7 +162,7 @@ namespace TimeThing
             this.LBTZ.AutoSize = true;
             this.LBTZ.BackColor = System.Drawing.Color.Orange;
             this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LBTZ.Location = new System.Drawing.Point(54, 214);
+            this.LBTZ.Location = new System.Drawing.Point(12, 213);
             this.LBTZ.Name = "LBTZ";
             this.LBTZ.Size = new System.Drawing.Size(150, 21);
             this.LBTZ.TabIndex = 30;
@@ -175,10 +175,10 @@ namespace TimeThing
             this.Twentyfourmodecheckbox.AutoSize = true;
             this.Twentyfourmodecheckbox.BackColor = System.Drawing.SystemColors.Control;
             this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.Black;
-            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 210);
+            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(411, 209);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
             this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(36, 25);
-            this.Twentyfourmodecheckbox.TabIndex = 32;
+            this.Twentyfourmodecheckbox.TabIndex = 0;
             this.Twentyfourmodecheckbox.Text = "24h";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
             this.Twentyfourmodecheckbox.Visible = false;
@@ -186,14 +186,15 @@ namespace TimeThing
             // 
             // Reposition
             // 
-            this.Reposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Reposition.Location = new System.Drawing.Point(515, 12);
+            this.Reposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Reposition.Location = new System.Drawing.Point(453, 209);
             this.Reposition.Name = "Reposition";
-            this.Reposition.Size = new System.Drawing.Size(23, 23);
-            this.Reposition.TabIndex = 33;
+            this.Reposition.Size = new System.Drawing.Size(23, 25);
+            this.Reposition.TabIndex = 1;
             this.Reposition.Text = "↔️";
             this.Reposition.UseVisualStyleBackColor = true;
             this.Reposition.Visible = false;
+            this.Reposition.Click += new System.EventHandler(this.Reposition_Click);
             // 
             // WidgetFormClass
             // 
