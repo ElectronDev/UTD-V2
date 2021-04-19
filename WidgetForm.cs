@@ -20,6 +20,13 @@ namespace TimeThing
         private void Form1_Shown(object sender, EventArgs e)
         {
             RestorePos();
+            splitter1.Visible = false;
+            ReturnBtn.Visible = false;
+            Twentyfourmodecheckbox.Visible = false;
+            OBTZ.Visible = false;
+            LBTZ.Visible = false;
+            Reposition.Visible = false;
+            Program.WidgetForm.Size = new Size(550, 200);
             LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
         }
