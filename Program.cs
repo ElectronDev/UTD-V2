@@ -11,6 +11,7 @@ namespace TimeThing
     {
         public static Form1 PrimaryForm;
         public static WidgetFormClass WidgetForm = new WidgetFormClass();
+        public static WidgetMoverClass WidgetMover = new WidgetMoverClass();
         public static TimeManager TM = new TimeManager();
         [STAThread]
         static void Main()

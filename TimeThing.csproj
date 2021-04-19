@@ -8,7 +8,7 @@
     <Authors>ElectronDev</Authors>
     <Company>ElectronDev Industries</Company>
     <Copyright>©️ElectronDev 2021</Copyright>
-    <Version>2.2.1</Version>
+    <Version>2.2.2</Version>
     <StartupObject>TimeThing.Program</StartupObject>
     <Description>I got lazy</Description>
     <NeutralLanguage>en-GB</NeutralLanguage>

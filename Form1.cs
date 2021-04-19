@@ -70,8 +70,8 @@ namespace TimeThing
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.TM.stopclock();
-            if (!Program.WidgetForm.IsDisposed)
-            Program.WidgetForm.Dispose();
+            if (!Program.WidgetForm.IsDisposed) { Program.WidgetForm.Dispose(); }
+            if (!Program.WidgetMover.IsDisposed) { Program.WidgetMover.Dispose(); }
             Program.PrimaryForm.Dispose();
         }
 

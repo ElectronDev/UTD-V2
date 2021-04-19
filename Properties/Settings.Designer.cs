@@ -58,5 +58,17 @@ namespace TimeThing.Properties {
                 this["OffsetTimeZone"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BR")]
+        public string WidgetPos {
+            get {
+                return ((string)(this["WidgetPos"]));
+            }
+            set {
+                this["WidgetPos"] = value;
+            }
+        }
     }
 }
