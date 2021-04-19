@@ -1,7 +1,7 @@
 # Univeral Time Display Version 2
 Second version of the glorified clock, no longer discriminates against anyone who isn't in the BST/GMT timezones!
 
-[![Build Status](https://travis-ci.com/ElectronDevDude/UTD-V2.svg?branch=master)](https://travis-ci.com/ElectronDevDude/UTD-V2)
+<!-- [![Build Status](https://travis-ci.com/ElectronDevDude/UTD-V2.svg?branch=master)](https://travis-ci.com/ElectronDevDude/UTD-V2) -->
 
 ## Next Update features:
 None planned
