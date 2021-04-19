@@ -56,6 +56,7 @@ namespace TimeThing
                 OffsetTrackBar.Enabled = false;
                 LocalTrackBar.Enabled = false;
                 ResetButton.Visible = false;
+                WidgetOpen.Visible = true;
                 Program.TM.startclock();
             }
             else {
@@ -63,6 +64,7 @@ namespace TimeThing
                 OffsetTrackBar.Enabled = true;
                 LocalTrackBar.Enabled = true;
                 ResetButton.Visible = true;
+                WidgetOpen.Visible = false;
                 Program.TM.stopclock();
             }
         }

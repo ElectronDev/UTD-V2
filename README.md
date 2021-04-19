@@ -4,7 +4,7 @@ Second version of the glorified clock, no longer discriminates against anyone wh
 [![Build Status](https://travis-ci.com/ElectronDevDude/UTD-V2.svg?branch=master)](https://travis-ci.com/ElectronDevDude/UTD-V2)
 
 ## Next Update features:
-> 1. Widget able to go onto other monitors
+None planned
 ## Features:
 > 1. See different times using buttons on the left of the screen!
 > 2. Change the bars in the middle of the window to view other times too!
