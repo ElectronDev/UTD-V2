@@ -40,7 +40,6 @@ namespace TimeThing
             LBTZ.Visible=true;
             Reposition.Visible = true;
             Twentyfourmodecheckbox.Visible = true;
-            Program.WidgetForm.Size = new Size(550, 244);
             int xLocation = 0;
             int yLocation = 0;
             if (area.Left > 0)
@@ -59,7 +58,18 @@ namespace TimeThing
             {
                 xLocation += area.Size.Width - 550;
             }
-            Program.WidgetForm.Location = new Point(xLocation, yLocation);
+            int sizex = 550;
+            int sizey = 244;
+            if (Program.WidgetMover.FreeButton.Enabled)
+            {
+                Program.WidgetForm.Location = new Point(xLocation, yLocation);
+            }
+            if (!Program.WidgetMover.FreeButton.Enabled && Program.WidgetMover.FreeMoveLock.Checked)
+            {
+                sizex = 566;
+                sizey = 283;
+            }
+            Program.WidgetForm.Size = new Size(sizex, sizey);
             Program.WidgetForm.Opacity = 1.00;
         }
 
@@ -101,8 +111,18 @@ namespace TimeThing
                 OBTZ.Visible=false;
                 LBTZ.Visible=false;
                 Reposition.Visible = false;
-                Program.WidgetForm.Size = new Size(550, 200);
-                Program.WidgetForm.Location = new Point( xLocation, yLocation);
+                int sizex = 550;
+                int sizey = 200;
+                if (Program.WidgetMover.FreeButton.Enabled)
+                {
+                    Program.WidgetForm.Location = new Point(xLocation, yLocation);
+                }
+                if (!Program.WidgetMover.FreeButton.Enabled && Program.WidgetMover.FreeMoveLock.Checked)
+                {
+                    sizex = 566;
+                    sizey = 239;
+                }
+                Program.WidgetForm.Size = new Size(sizex, sizey);
                 Program.WidgetForm.Opacity = 0.65;
             }
         }

@@ -40,6 +40,9 @@ namespace TimeThing
         {
             Properties.Settings.Default.WidgetPos = "TL";
             Properties.Settings.Default.Save();
+            FreeButton.Enabled = true;
+            FreeMoveLock.Checked = false;
+            FreeMoveLock.Enabled = false;
             TL.Enabled = false;
             TR.Enabled = true;
             BL.Enabled = true;
@@ -51,6 +54,9 @@ namespace TimeThing
         {
             Properties.Settings.Default.WidgetPos = "TR";
             Properties.Settings.Default.Save();
+            FreeButton.Enabled = true;
+            FreeMoveLock.Checked = false;
+            FreeMoveLock.Enabled = false;
             TL.Enabled = true;
             TR.Enabled = false;
             BL.Enabled = true;
@@ -62,6 +68,9 @@ namespace TimeThing
         {
             Properties.Settings.Default.WidgetPos = "BL";
             Properties.Settings.Default.Save();
+            FreeButton.Enabled = true;
+            FreeMoveLock.Checked = false;
+            FreeMoveLock.Enabled = false;
             TL.Enabled = true;
             TR.Enabled = true;
             BL.Enabled = false;
@@ -73,11 +82,37 @@ namespace TimeThing
         {
             Properties.Settings.Default.WidgetPos = "BR";
             Properties.Settings.Default.Save();
+            FreeButton.Enabled = true;
+            FreeMoveLock.Checked = false;
+            FreeMoveLock.Enabled = false;
             TL.Enabled = true;
             TR.Enabled = true;
             BL.Enabled = true;
             BR.Enabled = false;
             Program.WidgetForm.RestorePos();
+        }
+
+        private void FreeButton_Click(object sender, EventArgs e)
+        {
+            FreeButton.Enabled = false;
+            FreeMoveLock.Enabled = true;
+            FreeMoveLock.Checked = true;
+            TL.Enabled = true;
+            TR.Enabled = true;
+            BL.Enabled = true;
+            BR.Enabled = true;
+        }
+
+        private void FreeMoveLock_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FreeMoveLock.Checked)
+            {
+                Program.WidgetForm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            }
+            else
+            {
+                Program.WidgetForm.FormBorderStyle = FormBorderStyle.None;
+            }
         }
     }
 }
