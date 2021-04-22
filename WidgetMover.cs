@@ -15,9 +15,9 @@ namespace TimeThing
         public WidgetMoverClass()
         {
             InitializeComponent();
-            Shown += Form1_Shown;
+            Shown += Mover_Shown;
         }
-        private void Form1_Shown(object sender, EventArgs e)
+        private void Mover_Shown(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.WidgetPos == "TL")
             {

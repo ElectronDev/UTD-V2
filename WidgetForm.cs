@@ -15,9 +15,9 @@ namespace TimeThing
         public WidgetFormClass()
         {
             InitializeComponent();
-            Shown += Form1_Shown;
+            Shown += Widget_Shown;
         }
-        private void Form1_Shown(object sender, EventArgs e)
+        private void Widget_Shown(object sender, EventArgs e)
         {
             RestorePos();
             splitter1.Visible = false;
@@ -77,6 +77,7 @@ namespace TimeThing
         {
             Program.PrimaryForm.Invoke(new MethodInvoker(delegate () { Program.PrimaryForm.Twentyfourmodecheckbox.Checked = Properties.Settings.Default.twentyfourmode; }));
             Program.PrimaryForm.Show();
+            Program.WidgetMover.FreeMoveLock.Checked = false;
             Program.WidgetMover.Dispose();
             Program.WidgetForm.Dispose();
         }
