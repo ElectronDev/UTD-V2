@@ -29,6 +29,7 @@ namespace TimeThing
             Program.WidgetForm.Size = new Size(550, 200);
             LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
+            ColourPicker.CustomColors = new int[] { 11909845 };
         }
             private void Form1_MouseHover(object sender, EventArgs e)
         {
@@ -37,6 +38,7 @@ namespace TimeThing
             splitter1.Visible=true;
             ReturnBtn.Visible=true;
             OBTZ.Visible=true;
+            WCC.Visible = true;
             LBTZ.Visible=true;
             Reposition.Visible = true;
             Twentyfourmodecheckbox.Visible = true;
@@ -73,7 +75,7 @@ namespace TimeThing
             Program.WidgetForm.Opacity = 1.00;
         }
 
-        private void return_Click(object sender, EventArgs e)
+        private void Return_Click(object sender, EventArgs e)
         {
             Program.PrimaryForm.Invoke(new MethodInvoker(delegate () { Program.PrimaryForm.Twentyfourmodecheckbox.Checked = Properties.Settings.Default.twentyfourmode; }));
             Program.PrimaryForm.Show();
@@ -84,7 +86,7 @@ namespace TimeThing
 
         private void Form1_MouseLeave(object sender, EventArgs e)
         {
-            bool MouseIsOverControl(Form frm) => frm.ClientRectangle.Contains(frm.PointToClient(Cursor.Position));
+            static bool MouseIsOverControl(Form frm) => frm.ClientRectangle.Contains(frm.PointToClient(Cursor.Position));
             if (!MouseIsOverControl(Program.WidgetForm))
             {
                 Screen myscreen = Screen.FromControl(Program.WidgetForm);
@@ -109,6 +111,7 @@ namespace TimeThing
                 splitter1.Visible=false;
                 ReturnBtn.Visible=false;
                 Twentyfourmodecheckbox.Visible = false;
+                WCC.Visible = false;
                 OBTZ.Visible=false;
                 LBTZ.Visible=false;
                 Reposition.Visible = false;
@@ -127,7 +130,7 @@ namespace TimeThing
                 Program.WidgetForm.Opacity = 0.65;
             }
         }
-        public void RestorePos()
+        public static void RestorePos()
         {
             Screen myscreen = Screen.FromControl(Program.WidgetForm);
             Rectangle area = myscreen.WorkingArea;
@@ -160,13 +163,61 @@ namespace TimeThing
         {
             Properties.Settings.Default.twentyfourmode = Twentyfourmodecheckbox.Checked;
             Properties.Settings.Default.Save();
-            Program.TM.refresh();
+            Program.TM.Refresh();
         }
 
         private void Reposition_Click(object sender, EventArgs e)
         {
             Program.WidgetMover = new WidgetMoverClass();
             Program.WidgetMover.Show();
+        }
+
+        private void WCC_Click(object sender, EventArgs e) {
+            ColourPicker.ShowDialog();
+            static bool MouseIsOverControl(Form frm) => frm.ClientRectangle.Contains(frm.PointToClient(Cursor.Position));
+            if (!MouseIsOverControl(Program.WidgetForm))
+            {
+                Screen myscreen = Screen.FromControl(Program.WidgetForm);
+                Rectangle area = myscreen.WorkingArea;
+                int xLocation = 0;
+                int yLocation = 0;
+                if (area.Left > 0)
+                {
+                    xLocation = myscreen.Bounds.Width - myscreen.WorkingArea.Width;
+                }
+                if (area.Top > 0)
+                {
+                    yLocation = myscreen.Bounds.Height - myscreen.WorkingArea.Height;
+                }
+                if (!Properties.Settings.Default.WidgetPos.StartsWith("T"))
+                {
+                    yLocation += area.Size.Height - 200;
+                }
+                if (Properties.Settings.Default.WidgetPos.EndsWith("R"))
+                {
+                    xLocation += area.Size.Width - 550;
+                }
+                splitter1.Visible = false;
+                ReturnBtn.Visible = false;
+                Twentyfourmodecheckbox.Visible = false;
+                WCC.Visible = false;
+                OBTZ.Visible = false;
+                LBTZ.Visible = false;
+                Reposition.Visible = false;
+                int sizex = 550;
+                int sizey = 200;
+                if (Program.WidgetMover.FreeButton.Enabled)
+                {
+                    Program.WidgetForm.Location = new Point(xLocation, yLocation);
+                }
+                if (!Program.WidgetMover.FreeButton.Enabled && Program.WidgetMover.FreeMoveLock.Checked)
+                {
+                    sizex = 566;
+                    sizey = 239;
+                }
+                Program.WidgetForm.Size = new Size(sizex, sizey);
+                Program.WidgetForm.Opacity = 0.65;
+            }
         }
     }
 }

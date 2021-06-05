@@ -42,6 +42,8 @@ namespace TimeThing
             this.LBTZ = new System.Windows.Forms.Label();
             this.Twentyfourmodecheckbox = new System.Windows.Forms.CheckBox();
             this.Reposition = new System.Windows.Forms.Button();
+            this.WCC = new System.Windows.Forms.Button();
+            this.ColourPicker = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +58,11 @@ namespace TimeThing
             this.ReturnBtn.TabIndex = 2;
             this.ReturnBtn.Text = "Return";
             this.ReturnBtn.UseVisualStyleBackColor = false;
-            this.ReturnBtn.Click += new System.EventHandler(this.return_Click);
+            this.ReturnBtn.Click += new System.EventHandler(this.Return_Click);
             // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.Color.Orange;
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter1.Enabled = false;
@@ -74,7 +76,7 @@ namespace TimeThing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Orange;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 36);
@@ -85,8 +87,8 @@ namespace TimeThing
             // 
             this.LocalTimeDisplay.AutoSize = true;
             this.LocalTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LocalTimeDisplay.ForeColor = System.Drawing.Color.Silver;
-            this.LocalTimeDisplay.Location = new System.Drawing.Point(223, 14);
+            this.LocalTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
+            this.LocalTimeDisplay.Location = new System.Drawing.Point(210, 14);
             this.LocalTimeDisplay.Name = "LocalTimeDisplay";
             this.LocalTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LocalTimeDisplay.Size = new System.Drawing.Size(82, 31);
@@ -111,7 +113,7 @@ namespace TimeThing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Orange;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.label1.Location = new System.Drawing.Point(12, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 36);
@@ -122,8 +124,8 @@ namespace TimeThing
             // 
             this.OffsetTimeDisplay.AutoSize = true;
             this.OffsetTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.Silver;
-            this.OffsetTimeDisplay.Location = new System.Drawing.Point(223, 108);
+            this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
+            this.OffsetTimeDisplay.Location = new System.Drawing.Point(210, 108);
             this.OffsetTimeDisplay.Name = "OffsetTimeDisplay";
             this.OffsetTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.OffsetTimeDisplay.Size = new System.Drawing.Size(82, 31);
@@ -148,8 +150,9 @@ namespace TimeThing
             // 
             this.OBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OBTZ.AutoSize = true;
-            this.OBTZ.BackColor = System.Drawing.Color.Orange;
+            this.OBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
             this.OBTZ.Location = new System.Drawing.Point(195, 213);
             this.OBTZ.Name = "OBTZ";
             this.OBTZ.Size = new System.Drawing.Size(161, 21);
@@ -160,8 +163,9 @@ namespace TimeThing
             // 
             this.LBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LBTZ.AutoSize = true;
-            this.LBTZ.BackColor = System.Drawing.Color.Orange;
+            this.LBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
             this.LBTZ.Location = new System.Drawing.Point(12, 213);
             this.LBTZ.Name = "LBTZ";
             this.LBTZ.Size = new System.Drawing.Size(150, 21);
@@ -196,13 +200,32 @@ namespace TimeThing
             this.Reposition.Visible = false;
             this.Reposition.Click += new System.EventHandler(this.Reposition_Click);
             // 
+            // WCC
+            // 
+            this.WCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.WCC.Location = new System.Drawing.Point(411, 168);
+            this.WCC.Name = "WCC";
+            this.WCC.Size = new System.Drawing.Size(127, 26);
+            this.WCC.TabIndex = 32;
+            this.WCC.Text = "Colour Changer";
+            this.WCC.UseVisualStyleBackColor = true;
+            this.WCC.Visible = false;
+            this.WCC.Click += new System.EventHandler(this.WCC_Click);
+            // 
+            // ColourPicker
+            // 
+            this.ColourPicker.Color = Properties.Settings.Default.WidgetBG;
+            this.ColourPicker.FullOpen = true;
+            this.ColourPicker.SolidColorOnly = true;
+            // 
             // WidgetFormClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(550, 244);
             this.ControlBox = false;
+            this.Controls.Add(this.WCC);
             this.Controls.Add(this.Reposition);
             this.Controls.Add(this.Twentyfourmodecheckbox);
             this.Controls.Add(this.OBTZ);
@@ -248,6 +271,8 @@ namespace TimeThing
         private System.Windows.Forms.Label LBTZ;
         private System.Windows.Forms.Label OBTZ;
         private System.Windows.Forms.Button Reposition;
+        private System.Windows.Forms.Button WCC;
+        public System.Windows.Forms.ColorDialog ColourPicker;
     }
 }
 

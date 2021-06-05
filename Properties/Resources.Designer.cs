@@ -63,9 +63,19 @@ namespace TimeThing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Triring_2 {
+        internal static System.Drawing.Bitmap image00000 {
             get {
-                object obj = ResourceManager.GetObject("Triring 2", resourceCulture);
+                object obj = ResourceManager.GetObject("image00000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UTD1 {
+            get {
+                object obj = ResourceManager.GetObject("UTD1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

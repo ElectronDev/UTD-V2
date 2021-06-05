@@ -4,15 +4,15 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>image00026.ico</ApplicationIcon>
+    <ApplicationIcon>image00027.ico</ApplicationIcon>
     <Authors>ElectronDev</Authors>
     <Company>ElectronDev Industries</Company>
     <Copyright>©️ElectronDev 2021</Copyright>
-    <Version>2.2.3.1</Version>
+    <Version>2.2.4</Version>
     <StartupObject>TimeThing.Program</StartupObject>
     <Description>I got lazy</Description>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <PackageIcon>Triring 2.png</PackageIcon>
+    <PackageIcon>image00000.png</PackageIcon>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageTags>ImagineWritingCodeBecauseImLazy</PackageTags>
     <PackageId>MultiTime Viewer</PackageId>
@@ -40,7 +40,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="Triring 2.png">
+    <None Include="image00000.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

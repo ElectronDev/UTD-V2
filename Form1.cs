@@ -44,7 +44,7 @@ namespace TimeThing
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
             LTZD.Text = Program.TM.Conversions[Properties.Settings.Default.BaseTimeZone];
             OTZD.Text = Program.TM.Conversions[Properties.Settings.Default.OffsetTimeZone];
-            Program.TM.startclock();
+            Program.TM.Startclock();
         }
 
 
@@ -57,7 +57,7 @@ namespace TimeThing
                 LocalTrackBar.Enabled = false;
                 ResetButton.Visible = false;
                 WidgetOpen.Visible = true;
-                Program.TM.startclock();
+                Program.TM.Startclock();
             }
             else {
                 UnixLabel.Visible = false;
@@ -65,39 +65,39 @@ namespace TimeThing
                 LocalTrackBar.Enabled = true;
                 ResetButton.Visible = true;
                 WidgetOpen.Visible = false;
-                Program.TM.stopclock();
+                Program.TM.Stopclock();
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.TM.stopclock();
+            Program.TM.Stopclock();
             if (!Program.WidgetForm.IsDisposed) { Program.WidgetForm.Dispose(); }
             if (!Program.WidgetMover.IsDisposed) { Program.WidgetMover.Dispose(); }
             Program.PrimaryForm.Dispose();
         }
 
-        private void twentyfourmode_CheckedChanged(object sender, EventArgs e)
+        private void Twentyfourmode_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.twentyfourmode = Twentyfourmodecheckbox.Checked;
             Properties.Settings.Default.Save();
-            Program.TM.refresh();
+            Program.TM.Refresh();
         }
 
         private void LocalTrackBar_MouseCaptureChanged(object sender, EventArgs e)
         {
             Program.TM.lastdate = Program.TM.lastdate.Date.AddHours(Properties.Settings.Default.BaseTimeZone*-1).AddSeconds(LocalTrackBar.Value);
-            Program.TM.refresh();
+            Program.TM.Refresh();
         }
         private void OffsetTrackBar_MouseCaptureChanged(object sender, EventArgs e)
         {
             Program.TM.lastdate = Program.TM.lastdate.Date.AddHours(Properties.Settings.Default.OffsetTimeZone * -1).AddSeconds(OffsetTrackBar.Value);
-            Program.TM.refresh();
+            Program.TM.Refresh();
         }
         private void ResetButton_Click(object sender, EventArgs e)
         {
             Program.TM.lastdate = Program.TM.storeddate;
-            Program.TM.refresh();
+            Program.TM.Refresh();
         }
 
 
@@ -109,7 +109,7 @@ namespace TimeThing
             if (Properties.Settings.Default.BaseTimeZone >= 14) { BaseAddBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             BaseSubBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
         }
 
         private void BaseSubBtn_Click(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace TimeThing
             if (Properties.Settings.Default.BaseTimeZone <= -12) { BaseSubBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             BaseAddBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
         }
 
         private void OffsetAddBtn_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace TimeThing
             if (Properties.Settings.Default.OffsetTimeZone >= 14) { OffsetAddBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             OffsetSubBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
         }
 
         private void OffsetSubBtn_Click(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace TimeThing
             if (Properties.Settings.Default.OffsetTimeZone <= -12) { OffsetSubBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             OffsetAddBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
         }
 
         private void ProgramName_Click(object sender, EventArgs e)

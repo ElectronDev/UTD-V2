@@ -9,10 +9,16 @@ namespace TimeThing
 {
     public static class Program
     {
-        public static Form1 PrimaryForm;
-        public static WidgetFormClass WidgetForm = new WidgetFormClass();
-        public static WidgetMoverClass WidgetMover = new WidgetMoverClass();
-        public static TimeManager TM = new TimeManager();
+        private static WidgetFormClass widgetForm = new();
+        private static readonly WidgetMoverClass widgetMoverClass = new();
+        private static readonly TimeManager timeManager = new();
+        private static TimeManager tM = timeManager;
+
+        public static Form1 PrimaryForm { get; set; }
+        public static WidgetMoverClass WidgetMover { get; set; } = widgetMoverClass;
+        public static WidgetFormClass WidgetForm { get => widgetForm; set => widgetForm = value; }
+        public static TimeManager TM { get => tM; set => tM = value; }
+
         [STAThread]
         static void Main()
         {
@@ -29,8 +35,8 @@ namespace TimeThing
         private bool threadactive = false;
         public DateTime lastdate;
         public DateTime storeddate;
-        public Dictionary<int, string> Conversions = new Dictionary<int, string>();
-        public void refresh()
+        public Dictionary<int, string> Conversions = new();
+        public void Refresh()
         {
             string formatmode;
             if (!Properties.Settings.Default.twentyfourmode) { formatmode = "ddd MMM %d | hh:mm:ss tt"; }
@@ -44,15 +50,21 @@ namespace TimeThing
             int LTB = (int)basetime.TimeOfDay.TotalSeconds;
             string OTD = offsettime.ToString(formatmode);
             int OTB = (int)offsettime.TimeOfDay.TotalSeconds;
-            MethodInvoker PMinvoke = new MethodInvoker(delegate () {
+            if (!Program.WidgetForm.IsDisposed && Program.WidgetForm.ColourPicker.Color != Properties.Settings.Default.WidgetBG) 
+            {
+                Properties.Settings.Default.WidgetBG = Program.WidgetForm.ColourPicker.Color;
+                Properties.Settings.Default.Save();
+            }
+            MethodInvoker PMinvoke = new(delegate () {
                 Program.PrimaryForm.UnixLabel.Text = unixsecs;
                 Program.PrimaryForm.LocalTimeDisplay.Text = LTD;
                 Program.PrimaryForm.LocalTrackBar.Value = LTB;
                 Program.PrimaryForm.OffsetTimeDisplay.Text = OTD;
                 Program.PrimaryForm.OffsetTrackBar.Value = OTB;
             });
-            MethodInvoker WFinvoke = new MethodInvoker(delegate () {
+            MethodInvoker WFinvoke = new(delegate () {
                 Program.WidgetForm.LocalTimeDisplay.Text = LTD;
+                Program.WidgetForm.BackColor = Properties.Settings.Default.WidgetBG;
                 Program.WidgetForm.LocalTrackBar.Value = LTB;
                 Program.WidgetForm.OffsetTimeDisplay.Text = OTD;
                 Program.WidgetForm.OffsetTrackBar.Value = OTB;
@@ -60,23 +72,23 @@ namespace TimeThing
             if (!Program.PrimaryForm.IsDisposed && Program.PrimaryForm.Visible) { Program.PrimaryForm.Invoke(PMinvoke); }
             if (!Program.WidgetForm.IsDisposed && Program.WidgetForm.Visible) { Program.WidgetForm.Invoke(WFinvoke); }
         }
-        private void istartclock()
+        private void Istartclock()
         {
             while (threadactive)
             {
                 lastdate = DateTime.UtcNow;
-                refresh();
+                Refresh();
                 Thread.Sleep(500);
             }
         }
-        public void startclock() 
+        public void Startclock() 
         {
             threadactive = true;
-            loopthread = new Thread(istartclock);
+            loopthread = new Thread(Istartclock);
             loopthread.Start();
         }
 
-        public void stopclock()
+        public void Stopclock()
         {
             threadactive = false;
             lastdate = DateTime.UtcNow;

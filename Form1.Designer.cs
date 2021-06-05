@@ -32,7 +32,6 @@ namespace TimeThing
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.OffsetTrackBar = new System.Windows.Forms.TrackBar();
             this.LocalTrackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.LBTZ = new System.Windows.Forms.Label();
             this.OffsetTimeDisplay = new System.Windows.Forms.Label();
             this.Twentyfourmodecheckbox = new System.Windows.Forms.CheckBox();
@@ -53,9 +52,12 @@ namespace TimeThing
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.WidgetOpen = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // OffsetTrackBar
@@ -88,25 +90,13 @@ namespace TimeThing
             this.LocalTrackBar.Value = 1;
             this.LocalTrackBar.MouseCaptureChanged += new System.EventHandler(this.LocalTrackBar_MouseCaptureChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Orange;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 96);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Universal\r\nTime\r\nDisplay";
-            this.label1.Click += new System.EventHandler(this.ProgramName_Click);
-            // 
             // LBTZ
             // 
             this.LBTZ.AutoSize = true;
-            this.LBTZ.BackColor = System.Drawing.Color.Orange;
+            this.LBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LBTZ.Location = new System.Drawing.Point(14, 117);
+            this.LBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this.LBTZ.Location = new System.Drawing.Point(12, 186);
             this.LBTZ.Name = "LBTZ";
             this.LBTZ.Size = new System.Drawing.Size(150, 21);
             this.LBTZ.TabIndex = 3;
@@ -117,7 +107,7 @@ namespace TimeThing
             this.OffsetTimeDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OffsetTimeDisplay.AutoSize = true;
             this.OffsetTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OffsetTimeDisplay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
             this.OffsetTimeDisplay.Location = new System.Drawing.Point(296, 278);
             this.OffsetTimeDisplay.Name = "OffsetTimeDisplay";
             this.OffsetTimeDisplay.Size = new System.Drawing.Size(98, 37);
@@ -128,20 +118,21 @@ namespace TimeThing
             // 
             this.Twentyfourmodecheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Twentyfourmodecheckbox.AutoSize = true;
-            this.Twentyfourmodecheckbox.BackColor = System.Drawing.Color.Orange;
+            this.Twentyfourmodecheckbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
+            this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
             this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(12, 391);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
             this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(79, 19);
             this.Twentyfourmodecheckbox.TabIndex = 5;
             this.Twentyfourmodecheckbox.Text = "24h mode";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
-            this.Twentyfourmodecheckbox.CheckedChanged += new System.EventHandler(this.twentyfourmode_CheckedChanged);
+            this.Twentyfourmodecheckbox.CheckedChanged += new System.EventHandler(this.Twentyfourmode_CheckedChanged);
             // 
             // LocalTimeDisplay
             // 
             this.LocalTimeDisplay.AutoSize = true;
             this.LocalTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LocalTimeDisplay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LocalTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
             this.LocalTimeDisplay.Location = new System.Drawing.Point(296, 76);
             this.LocalTimeDisplay.Name = "LocalTimeDisplay";
             this.LocalTimeDisplay.Size = new System.Drawing.Size(98, 37);
@@ -153,7 +144,7 @@ namespace TimeThing
             this.UnixLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.UnixLabel.AutoSize = true;
             this.UnixLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UnixLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.UnixLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
             this.UnixLabel.Location = new System.Drawing.Point(294, 422);
             this.UnixLabel.Name = "UnixLabel";
             this.UnixLabel.Size = new System.Drawing.Size(77, 30);
@@ -165,7 +156,7 @@ namespace TimeThing
             this.CurrentTimeCheckBox.AutoSize = true;
             this.CurrentTimeCheckBox.Checked = true;
             this.CurrentTimeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CurrentTimeCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CurrentTimeCheckBox.ForeColor = System.Drawing.Color.Black;
             this.CurrentTimeCheckBox.Location = new System.Drawing.Point(294, 9);
             this.CurrentTimeCheckBox.Name = "CurrentTimeCheckBox";
             this.CurrentTimeCheckBox.Size = new System.Drawing.Size(100, 19);
@@ -188,7 +179,7 @@ namespace TimeThing
             // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.Color.Orange;
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
@@ -200,8 +191,8 @@ namespace TimeThing
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Orange;
-            this.pictureBox1.Image = global::TimeThing.Properties.Resources.Triring_2;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
+            this.pictureBox1.Image = global::TimeThing.Properties.Resources.image00000;
             this.pictureBox1.Location = new System.Drawing.Point(12, 416);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(32, 32);
             this.pictureBox1.Name = "pictureBox1";
@@ -214,9 +205,10 @@ namespace TimeThing
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Orange;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
             this.label3.Location = new System.Drawing.Point(50, 425);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 18);
@@ -228,9 +220,10 @@ namespace TimeThing
             // 
             this.OBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OBTZ.AutoSize = true;
-            this.OBTZ.BackColor = System.Drawing.Color.Orange;
+            this.OBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OBTZ.Location = new System.Drawing.Point(12, 318);
+            this.OBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this.OBTZ.Location = new System.Drawing.Point(9, 342);
             this.OBTZ.Name = "OBTZ";
             this.OBTZ.Size = new System.Drawing.Size(161, 21);
             this.OBTZ.TabIndex = 16;
@@ -240,7 +233,7 @@ namespace TimeThing
             // 
             this.LTZD.AutoSize = true;
             this.LTZD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LTZD.ForeColor = System.Drawing.Color.Orange;
+            this.LTZD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.LTZD.Location = new System.Drawing.Point(296, 165);
             this.LTZD.Name = "LTZD";
             this.LTZD.Size = new System.Drawing.Size(45, 21);
@@ -252,7 +245,7 @@ namespace TimeThing
             this.OTZD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OTZD.AutoSize = true;
             this.OTZD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OTZD.ForeColor = System.Drawing.Color.Orange;
+            this.OTZD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.OTZD.Location = new System.Drawing.Point(296, 366);
             this.OTZD.Name = "OTZD";
             this.OTZD.Size = new System.Drawing.Size(49, 21);
@@ -261,7 +254,7 @@ namespace TimeThing
             // 
             // BaseAddBtn
             // 
-            this.BaseAddBtn.Location = new System.Drawing.Point(14, 141);
+            this.BaseAddBtn.Location = new System.Drawing.Point(12, 160);
             this.BaseAddBtn.Name = "BaseAddBtn";
             this.BaseAddBtn.Size = new System.Drawing.Size(47, 23);
             this.BaseAddBtn.TabIndex = 1;
@@ -272,7 +265,7 @@ namespace TimeThing
             // OffsetAddBtn
             // 
             this.OffsetAddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetAddBtn.Location = new System.Drawing.Point(12, 342);
+            this.OffsetAddBtn.Location = new System.Drawing.Point(12, 316);
             this.OffsetAddBtn.Name = "OffsetAddBtn";
             this.OffsetAddBtn.Size = new System.Drawing.Size(47, 23);
             this.OffsetAddBtn.TabIndex = 3;
@@ -282,7 +275,7 @@ namespace TimeThing
             // 
             // BaseSubBtn
             // 
-            this.BaseSubBtn.Location = new System.Drawing.Point(67, 141);
+            this.BaseSubBtn.Location = new System.Drawing.Point(65, 160);
             this.BaseSubBtn.Name = "BaseSubBtn";
             this.BaseSubBtn.Size = new System.Drawing.Size(61, 23);
             this.BaseSubBtn.TabIndex = 2;
@@ -293,7 +286,7 @@ namespace TimeThing
             // OffsetSubBtn
             // 
             this.OffsetSubBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetSubBtn.Location = new System.Drawing.Point(65, 342);
+            this.OffsetSubBtn.Location = new System.Drawing.Point(65, 316);
             this.OffsetSubBtn.Name = "OffsetSubBtn";
             this.OffsetSubBtn.Size = new System.Drawing.Size(61, 23);
             this.OffsetSubBtn.TabIndex = 4;
@@ -305,7 +298,7 @@ namespace TimeThing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Orange;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.label2.Location = new System.Drawing.Point(298, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 36);
@@ -317,7 +310,7 @@ namespace TimeThing
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Orange;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
             this.label4.Location = new System.Drawing.Point(296, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(205, 36);
@@ -335,13 +328,40 @@ namespace TimeThing
             this.WidgetOpen.UseVisualStyleBackColor = true;
             this.WidgetOpen.Click += new System.EventHandler(this.WidgetOpen_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::TimeThing.Properties.Resources.UTD1;
+            this.pictureBox2.Location = new System.Drawing.Point(117, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(145, 145);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 120);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Universal\r\n\r\nTime\r\n\r\nDisplay";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 460);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.WidgetOpen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -361,7 +381,6 @@ namespace TimeThing
             this.Controls.Add(this.Twentyfourmodecheckbox);
             this.Controls.Add(this.OffsetTimeDisplay);
             this.Controls.Add(this.LBTZ);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.LocalTrackBar);
             this.Controls.Add(this.OffsetTrackBar);
             this.Controls.Add(this.splitter1);
@@ -376,13 +395,13 @@ namespace TimeThing
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LBTZ;
         private System.Windows.Forms.CheckBox CurrentTimeCheckBox;
         public System.Windows.Forms.Label UnixLabel;
@@ -405,6 +424,8 @@ namespace TimeThing
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button WidgetOpen;
         public System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

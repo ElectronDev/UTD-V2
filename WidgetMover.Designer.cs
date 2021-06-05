@@ -102,7 +102,7 @@ namespace TimeThing
             // 
             this.FreeMoveLock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FreeMoveLock.AutoSize = true;
-            this.FreeMoveLock.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.FreeMoveLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.FreeMoveLock.Enabled = false;
             this.FreeMoveLock.Location = new System.Drawing.Point(15, 244);
             this.FreeMoveLock.Name = "FreeMoveLock";
@@ -114,7 +114,7 @@ namespace TimeThing
             // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter1.Enabled = false;
@@ -128,7 +128,7 @@ namespace TimeThing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(284, 275);
             this.Controls.Add(this.FreeMoveLock);
             this.Controls.Add(this.FreeButton);

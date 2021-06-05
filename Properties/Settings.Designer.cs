@@ -70,5 +70,17 @@ namespace TimeThing.Properties {
                 this["WidgetPos"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("213, 186, 181")]
+        public global::System.Drawing.Color WidgetBG {
+            get {
+                return ((global::System.Drawing.Color)(this["WidgetBG"]));
+            }
+            set {
+                this["WidgetBG"] = value;
+            }
+        }
     }
 }

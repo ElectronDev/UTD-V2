@@ -47,7 +47,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = true;
             BR.Enabled = true;
-            Program.WidgetForm.RestorePos();
+            WidgetFormClass.RestorePos();
         }
 
         private void TR_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace TimeThing
             TR.Enabled = false;
             BL.Enabled = true;
             BR.Enabled = true;
-            Program.WidgetForm.RestorePos();
+            WidgetFormClass.RestorePos();
         }
 
         private void BL_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = false;
             BR.Enabled = true;
-            Program.WidgetForm.RestorePos();
+            WidgetFormClass.RestorePos();
         }
 
         private void BR_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = true;
             BR.Enabled = false;
-            Program.WidgetForm.RestorePos();
+            WidgetFormClass.RestorePos();
         }
 
         private void FreeButton_Click(object sender, EventArgs e)

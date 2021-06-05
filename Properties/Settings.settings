@@ -14,5 +14,8 @@
     <Setting Name="WidgetPos" Type="System.String" Scope="User">
       <Value Profile="(Default)">BR</Value>
     </Setting>
+    <Setting Name="WidgetBG" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">213, 186, 181</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
