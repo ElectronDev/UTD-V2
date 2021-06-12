@@ -32,18 +32,16 @@ namespace TimeThing
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WidgetFormClass));
             this.ReturnBtn = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BaseDisplayText = new System.Windows.Forms.Label();
             this.LocalTimeDisplay = new System.Windows.Forms.Label();
             this.LocalTrackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.OffsetDisplayText = new System.Windows.Forms.Label();
             this.OffsetTimeDisplay = new System.Windows.Forms.Label();
             this.OffsetTrackBar = new System.Windows.Forms.TrackBar();
             this.OBTZ = new System.Windows.Forms.Label();
             this.LBTZ = new System.Windows.Forms.Label();
             this.Twentyfourmodecheckbox = new System.Windows.Forms.CheckBox();
             this.Reposition = new System.Windows.Forms.Button();
-            this.WCC = new System.Windows.Forms.Button();
-            this.ColourPicker = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -72,23 +70,23 @@ namespace TimeThing
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
-            // label2
+            // BaseDisplayText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 36);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Base Display:";
+            this.BaseDisplayText.AutoSize = true;
+            this.BaseDisplayText.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.BaseDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
+            this.BaseDisplayText.Location = new System.Drawing.Point(12, 31);
+            this.BaseDisplayText.Name = "BaseDisplayText";
+            this.BaseDisplayText.Size = new System.Drawing.Size(149, 24);
+            this.BaseDisplayText.TabIndex = 26;
+            this.BaseDisplayText.Text = "Base Display:";
             // 
             // LocalTimeDisplay
             // 
             this.LocalTimeDisplay.AutoSize = true;
             this.LocalTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LocalTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
-            this.LocalTimeDisplay.Location = new System.Drawing.Point(210, 14);
+            this.LocalTimeDisplay.Location = new System.Drawing.Point(184, 24);
             this.LocalTimeDisplay.Name = "LocalTimeDisplay";
             this.LocalTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LocalTimeDisplay.Size = new System.Drawing.Size(82, 31);
@@ -109,23 +107,23 @@ namespace TimeThing
             this.LocalTrackBar.TabIndex = 24;
             this.LocalTrackBar.Value = 1;
             // 
-            // label1
+            // OffsetDisplayText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(12, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 36);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Offset Display:";
+            this.OffsetDisplayText.AutoSize = true;
+            this.OffsetDisplayText.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.OffsetDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
+            this.OffsetDisplayText.Location = new System.Drawing.Point(12, 125);
+            this.OffsetDisplayText.Name = "OffsetDisplayText";
+            this.OffsetDisplayText.Size = new System.Drawing.Size(166, 24);
+            this.OffsetDisplayText.TabIndex = 29;
+            this.OffsetDisplayText.Text = "Offset Display:";
             // 
             // OffsetTimeDisplay
             // 
             this.OffsetTimeDisplay.AutoSize = true;
             this.OffsetTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
-            this.OffsetTimeDisplay.Location = new System.Drawing.Point(210, 108);
+            this.OffsetTimeDisplay.Location = new System.Drawing.Point(184, 118);
             this.OffsetTimeDisplay.Name = "OffsetTimeDisplay";
             this.OffsetTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.OffsetTimeDisplay.Size = new System.Drawing.Size(82, 31);
@@ -200,24 +198,6 @@ namespace TimeThing
             this.Reposition.Visible = false;
             this.Reposition.Click += new System.EventHandler(this.Reposition_Click);
             // 
-            // WCC
-            // 
-            this.WCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.WCC.Location = new System.Drawing.Point(411, 168);
-            this.WCC.Name = "WCC";
-            this.WCC.Size = new System.Drawing.Size(127, 26);
-            this.WCC.TabIndex = 32;
-            this.WCC.Text = "Colour Changer";
-            this.WCC.UseVisualStyleBackColor = true;
-            this.WCC.Visible = false;
-            this.WCC.Click += new System.EventHandler(this.WCC_Click);
-            // 
-            // ColourPicker
-            // 
-            this.ColourPicker.Color = Properties.Settings.Default.WidgetBG;
-            this.ColourPicker.FullOpen = true;
-            this.ColourPicker.SolidColorOnly = true;
-            // 
             // WidgetFormClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -225,15 +205,14 @@ namespace TimeThing
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(550, 244);
             this.ControlBox = false;
-            this.Controls.Add(this.WCC);
             this.Controls.Add(this.Reposition);
             this.Controls.Add(this.Twentyfourmodecheckbox);
             this.Controls.Add(this.OBTZ);
             this.Controls.Add(this.LBTZ);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.OffsetDisplayText);
             this.Controls.Add(this.OffsetTimeDisplay);
             this.Controls.Add(this.OffsetTrackBar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BaseDisplayText);
             this.Controls.Add(this.LocalTimeDisplay);
             this.Controls.Add(this.LocalTrackBar);
             this.Controls.Add(this.ReturnBtn);
@@ -261,18 +240,16 @@ namespace TimeThing
 
         public System.Windows.Forms.Button ReturnBtn;
         public System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label LocalTimeDisplay;
         public System.Windows.Forms.TrackBar LocalTrackBar;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label OffsetTimeDisplay;
         public System.Windows.Forms.TrackBar OffsetTrackBar;
         private System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
-        private System.Windows.Forms.Label LBTZ;
-        private System.Windows.Forms.Label OBTZ;
         private System.Windows.Forms.Button Reposition;
-        private System.Windows.Forms.Button WCC;
-        public System.Windows.Forms.ColorDialog ColourPicker;
+        public System.Windows.Forms.Label BaseDisplayText;
+        public System.Windows.Forms.Label OffsetDisplayText;
+        public System.Windows.Forms.Label LBTZ;
+        public System.Windows.Forms.Label OBTZ;
     }
 }
 

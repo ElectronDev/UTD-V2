@@ -14,8 +14,20 @@
     <Setting Name="WidgetPos" Type="System.String" Scope="User">
       <Value Profile="(Default)">BR</Value>
     </Setting>
-    <Setting Name="WidgetBG" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="MainColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">213, 186, 181</Value>
+    </Setting>
+    <Setting Name="AccentColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">87, 77, 104</Value>
+    </Setting>
+    <Setting Name="TimesColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">106, 141, 115</Value>
+    </Setting>
+    <Setting Name="TxtColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">147, 198, 214</Value>
+    </Setting>
+    <Setting Name="DisplayTextColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">211, 97, 53</Value>
     </Setting>
   </Settings>
 </SettingsFile>

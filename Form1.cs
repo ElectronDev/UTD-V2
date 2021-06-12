@@ -161,5 +161,11 @@ namespace TimeThing
             Program.WidgetForm = new WidgetFormClass();
             Program.WidgetForm.Show();
         }
+
+        private void CustomiseBtn_Click(object sender, EventArgs e)
+        {
+            Program.CumForm = new CustomiserForm();
+            Program.CumForm.Show();
+        }
     }
 }

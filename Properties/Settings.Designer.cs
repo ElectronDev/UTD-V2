@@ -12,7 +12,7 @@ namespace TimeThing.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -74,12 +74,60 @@ namespace TimeThing.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("213, 186, 181")]
-        public global::System.Drawing.Color WidgetBG {
+        public global::System.Drawing.Color MainColour {
             get {
-                return ((global::System.Drawing.Color)(this["WidgetBG"]));
+                return ((global::System.Drawing.Color)(this["MainColour"]));
             }
             set {
-                this["WidgetBG"] = value;
+                this["MainColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("87, 77, 104")]
+        public global::System.Drawing.Color AccentColour {
+            get {
+                return ((global::System.Drawing.Color)(this["AccentColour"]));
+            }
+            set {
+                this["AccentColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("106, 141, 115")]
+        public global::System.Drawing.Color TimesColour {
+            get {
+                return ((global::System.Drawing.Color)(this["TimesColour"]));
+            }
+            set {
+                this["TimesColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("147, 198, 214")]
+        public global::System.Drawing.Color TxtColour {
+            get {
+                return ((global::System.Drawing.Color)(this["TxtColour"]));
+            }
+            set {
+                this["TxtColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("211, 97, 53")]
+        public global::System.Drawing.Color DisplayTextColour {
+            get {
+                return ((global::System.Drawing.Color)(this["DisplayTextColour"]));
+            }
+            set {
+                this["DisplayTextColour"] = value;
             }
         }
     }

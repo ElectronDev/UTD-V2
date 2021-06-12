@@ -49,11 +49,12 @@ namespace TimeThing
             this.OffsetAddBtn = new System.Windows.Forms.Button();
             this.BaseSubBtn = new System.Windows.Forms.Button();
             this.OffsetSubBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BaseDisplayText = new System.Windows.Forms.Label();
+            this.OffsetDisplayText = new System.Windows.Forms.Label();
             this.WidgetOpen = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.CustomiseBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,7 +157,7 @@ namespace TimeThing
             this.CurrentTimeCheckBox.AutoSize = true;
             this.CurrentTimeCheckBox.Checked = true;
             this.CurrentTimeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CurrentTimeCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.CurrentTimeCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
             this.CurrentTimeCheckBox.Location = new System.Drawing.Point(294, 9);
             this.CurrentTimeCheckBox.Name = "CurrentTimeCheckBox";
             this.CurrentTimeCheckBox.Size = new System.Drawing.Size(100, 19);
@@ -294,28 +295,28 @@ namespace TimeThing
             this.OffsetSubBtn.UseVisualStyleBackColor = true;
             this.OffsetSubBtn.Click += new System.EventHandler(this.OffsetSubBtn_Click);
             // 
-            // label2
+            // BaseDisplayText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.label2.Location = new System.Drawing.Point(298, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 36);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Base Display:";
+            this.BaseDisplayText.AutoSize = true;
+            this.BaseDisplayText.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.BaseDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
+            this.BaseDisplayText.Location = new System.Drawing.Point(298, 37);
+            this.BaseDisplayText.Name = "BaseDisplayText";
+            this.BaseDisplayText.Size = new System.Drawing.Size(228, 36);
+            this.BaseDisplayText.TabIndex = 23;
+            this.BaseDisplayText.Text = "Base Display:";
             // 
-            // label4
+            // OffsetDisplayText
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.label4.Location = new System.Drawing.Point(296, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 36);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Offset Display:";
+            this.OffsetDisplayText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.OffsetDisplayText.AutoSize = true;
+            this.OffsetDisplayText.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.OffsetDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
+            this.OffsetDisplayText.Location = new System.Drawing.Point(296, 242);
+            this.OffsetDisplayText.Name = "OffsetDisplayText";
+            this.OffsetDisplayText.Size = new System.Drawing.Size(255, 36);
+            this.OffsetDisplayText.TabIndex = 24;
+            this.OffsetDisplayText.Text = "Offset Display:";
             // 
             // WidgetOpen
             // 
@@ -353,6 +354,17 @@ namespace TimeThing
             this.label1.Text = "Universal\r\n\r\nTime\r\n\r\nDisplay";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // CustomiseBtn
+            // 
+            this.CustomiseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CustomiseBtn.Location = new System.Drawing.Point(187, 383);
+            this.CustomiseBtn.Name = "CustomiseBtn";
+            this.CustomiseBtn.Size = new System.Drawing.Size(75, 23);
+            this.CustomiseBtn.TabIndex = 27;
+            this.CustomiseBtn.Text = "Customise";
+            this.CustomiseBtn.UseVisualStyleBackColor = true;
+            this.CustomiseBtn.Click += new System.EventHandler(this.CustomiseBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -360,11 +372,12 @@ namespace TimeThing
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 460);
+            this.Controls.Add(this.CustomiseBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.WidgetOpen);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.OffsetDisplayText);
+            this.Controls.Add(this.BaseDisplayText);
             this.Controls.Add(this.OffsetSubBtn);
             this.Controls.Add(this.BaseSubBtn);
             this.Controls.Add(this.OffsetAddBtn);
@@ -402,30 +415,31 @@ namespace TimeThing
         }
 
         #endregion
-        private System.Windows.Forms.Label LBTZ;
-        private System.Windows.Forms.CheckBox CurrentTimeCheckBox;
         public System.Windows.Forms.Label UnixLabel;
         public System.Windows.Forms.Label OffsetTimeDisplay;
         public System.Windows.Forms.Label LocalTimeDisplay;
         public System.Windows.Forms.TrackBar LocalTrackBar;
         public System.Windows.Forms.TrackBar OffsetTrackBar;
         private System.Windows.Forms.Button ResetButton;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label OBTZ;
-        private System.Windows.Forms.Label LTZD;
-        private System.Windows.Forms.Label OTZD;
         private System.Windows.Forms.Button BaseAddBtn;
         private System.Windows.Forms.Button OffsetAddBtn;
         private System.Windows.Forms.Button BaseSubBtn;
         private System.Windows.Forms.Button OffsetSubBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button WidgetOpen;
         public System.Windows.Forms.CheckBox Twentyfourmodecheckbox;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CustomiseBtn;
+        public System.Windows.Forms.Splitter splitter1;
+        public System.Windows.Forms.CheckBox CurrentTimeCheckBox;
+        public System.Windows.Forms.Label LTZD;
+        public System.Windows.Forms.Label OTZD;
+        public System.Windows.Forms.Label BaseDisplayText;
+        public System.Windows.Forms.Label OffsetDisplayText;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label LBTZ;
+        public System.Windows.Forms.Label OBTZ;
     }
 }
 
