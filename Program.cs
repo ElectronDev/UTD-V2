@@ -37,7 +37,7 @@ namespace TimeThing
         private bool threadactive = false;
         public DateTime lastdate;
         public DateTime storeddate;
-        public Dictionary<int, string> Conversions = new();
+        public Dictionary<double, string> Conversions = new();
         public void Refresh()
         {
             string formatmode;
