@@ -12,6 +12,7 @@ namespace TimeThing
 {
     public partial class WidgetFormClass : Form
     {
+        public bool IsFloating = false;
         public WidgetFormClass()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace TimeThing
         }
         private void Widget_Shown(object sender, EventArgs e)
         {
+            if (!IsFloating) {
             RestorePos();
+            }
             splitter1.Visible = false;
             ReturnBtn.Visible = false;
             Twentyfourmodecheckbox.Visible = false;
@@ -129,6 +132,7 @@ namespace TimeThing
         }
         public static void RestorePos()
         {
+            Program.WidgetForm.FormBorderStyle = FormBorderStyle.None;
             Screen myscreen = Screen.FromControl(Program.WidgetForm);
             Rectangle area = myscreen.WorkingArea;
             int xLocation = 0;
@@ -165,8 +169,15 @@ namespace TimeThing
 
         private void Reposition_Click(object sender, EventArgs e)
         {
+            if (!Program.WidgetMover.Visible)
+            {
             Program.WidgetMover = new WidgetMoverClass();
             Program.WidgetMover.Show();
+            }
+            else 
+            {
+                Program.WidgetMover.Focus();
+            }
         }
     }
 }

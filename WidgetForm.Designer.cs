@@ -225,7 +225,6 @@ namespace TimeThing
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "UTD Widget";
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.White;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WidgetFormClass_FormClosing);
             this.MouseEnter += new System.EventHandler(this.Form1_MouseHover);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);

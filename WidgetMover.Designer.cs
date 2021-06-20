@@ -146,6 +146,7 @@ namespace TimeThing
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WidgetMover";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WidgetMoverClass_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

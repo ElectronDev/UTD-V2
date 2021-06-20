@@ -19,21 +19,27 @@ namespace TimeThing
         }
         private void Mover_Shown(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.WidgetPos == "TL")
+            if (Properties.Settings.Default.WidgetPos == "TL" && !Program.WidgetForm.IsFloating)
             {
                 TL.Enabled = false;
             }
-            if (Properties.Settings.Default.WidgetPos == "TR")
+            if (Properties.Settings.Default.WidgetPos == "TR" && !Program.WidgetForm.IsFloating)
             {
                 TR.Enabled = false;
             }
-            if (Properties.Settings.Default.WidgetPos == "BL")
+            if (Properties.Settings.Default.WidgetPos == "BL" && !Program.WidgetForm.IsFloating)
             {
                 BL.Enabled = false;
             }
-            if (Properties.Settings.Default.WidgetPos == "BR")
+            if (Properties.Settings.Default.WidgetPos == "BR" && !Program.WidgetForm.IsFloating)
             {
                 BR.Enabled = false;
+            }
+            if (Program.WidgetForm.IsFloating)
+            {
+                FreeButton.Enabled = false;
+                FreeMoveLock.Enabled = true;
+                FreeMoveLock.Checked = false;
             }
         }
             private void TL_Click(object sender, EventArgs e)
@@ -47,6 +53,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = true;
             BR.Enabled = true;
+            Program.WidgetForm.IsFloating = false;
             WidgetFormClass.RestorePos();
         }
 
@@ -61,6 +68,7 @@ namespace TimeThing
             TR.Enabled = false;
             BL.Enabled = true;
             BR.Enabled = true;
+            Program.WidgetForm.IsFloating = false;
             WidgetFormClass.RestorePos();
         }
 
@@ -75,6 +83,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = false;
             BR.Enabled = true;
+            Program.WidgetForm.IsFloating = false;
             WidgetFormClass.RestorePos();
         }
 
@@ -89,6 +98,7 @@ namespace TimeThing
             TR.Enabled = true;
             BL.Enabled = true;
             BR.Enabled = false;
+            Program.WidgetForm.IsFloating = false;
             WidgetFormClass.RestorePos();
         }
 
@@ -97,6 +107,7 @@ namespace TimeThing
             FreeButton.Enabled = false;
             FreeMoveLock.Enabled = true;
             FreeMoveLock.Checked = true;
+            Program.WidgetForm.IsFloating = true;
             TL.Enabled = true;
             TR.Enabled = true;
             BL.Enabled = true;
@@ -113,6 +124,12 @@ namespace TimeThing
             {
                 Program.WidgetForm.FormBorderStyle = FormBorderStyle.None;
             }
+        }
+
+        private void WidgetMoverClass_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.WidgetForm.FormBorderStyle = FormBorderStyle.None;
+            FreeMoveLock.Checked = false;
         }
     }
 }
