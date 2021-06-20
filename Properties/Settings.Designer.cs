@@ -38,9 +38,9 @@ namespace TimeThing.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int BaseTimeZone {
+        public double BaseTimeZone {
             get {
-                return ((int)(this["BaseTimeZone"]));
+                return ((double)(this["BaseTimeZone"]));
             }
             set {
                 this["BaseTimeZone"] = value;
@@ -50,9 +50,9 @@ namespace TimeThing.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int OffsetTimeZone {
+        public double OffsetTimeZone {
             get {
-                return ((int)(this["OffsetTimeZone"]));
+                return ((double)(this["OffsetTimeZone"]));
             }
             set {
                 this["OffsetTimeZone"] = value;

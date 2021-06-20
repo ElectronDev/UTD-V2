@@ -5,10 +5,10 @@
     <Setting Name="twentyfourmode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="BaseTimeZone" Type="System.Int32" Scope="User">
+    <Setting Name="BaseTimeZone" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="OffsetTimeZone" Type="System.Int32" Scope="User">
+    <Setting Name="OffsetTimeZone" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="WidgetPos" Type="System.String" Scope="User">

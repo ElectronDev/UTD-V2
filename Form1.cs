@@ -117,7 +117,12 @@ namespace TimeThing
 
         private void BaseAddBtn_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.BaseTimeZone += 1;
+            int m = 1;
+            while (!Program.TM.Conversions.ContainsKey(Properties.Settings.Default.BaseTimeZone + (0.25 * m)))
+            {
+                m += 1;
+            }
+            Properties.Settings.Default.BaseTimeZone += (0.25*m);
             LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             LTZD.Text = Program.TM.Conversions[Properties.Settings.Default.BaseTimeZone];
             if (Properties.Settings.Default.BaseTimeZone >= 14) { BaseAddBtn.Enabled = false; }
@@ -128,7 +133,12 @@ namespace TimeThing
 
         private void BaseSubBtn_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.BaseTimeZone -= 1;
+            int m = 1;
+            while (!Program.TM.Conversions.ContainsKey(Properties.Settings.Default.BaseTimeZone + (-0.25 * m)))
+            {
+                m += 1;
+            }
+            Properties.Settings.Default.BaseTimeZone += (-0.25 * m);
             LBTZ.Text = "Base Timezone: " + Properties.Settings.Default.BaseTimeZone.ToString() + " UTC";
             LTZD.Text = Program.TM.Conversions[Properties.Settings.Default.BaseTimeZone];
             if (Properties.Settings.Default.BaseTimeZone <= -12) { BaseSubBtn.Enabled = false; }
@@ -139,7 +149,12 @@ namespace TimeThing
 
         private void OffsetAddBtn_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.OffsetTimeZone += 1;
+            int m = 1;
+            while (!Program.TM.Conversions.ContainsKey(Properties.Settings.Default.OffsetTimeZone + (0.25 * m)))
+            {
+                m += 1;
+            }
+            Properties.Settings.Default.OffsetTimeZone += (0.25 * m);
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
             OTZD.Text = Program.TM.Conversions[Properties.Settings.Default.OffsetTimeZone];
             if (Properties.Settings.Default.OffsetTimeZone >= 14) { OffsetAddBtn.Enabled = false; }
@@ -150,7 +165,12 @@ namespace TimeThing
 
         private void OffsetSubBtn_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.OffsetTimeZone -= 1;
+            int m = 1;
+            while (!Program.TM.Conversions.ContainsKey(Properties.Settings.Default.OffsetTimeZone + (-0.25 * m)))
+            {
+                m += 1;
+            }
+            Properties.Settings.Default.OffsetTimeZone += (-0.25 * m);
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
             OTZD.Text = Program.TM.Conversions[Properties.Settings.Default.OffsetTimeZone];
             if (Properties.Settings.Default.OffsetTimeZone <= -12) { OffsetSubBtn.Enabled = false; }
