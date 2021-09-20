@@ -73,7 +73,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DodgerBlue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 26, 51")]
         public global::System.Drawing.Color MainColour {
             get {
                 return ((global::System.Drawing.Color)(this["MainColour"]));
@@ -85,7 +85,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 33, 71")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 50, 120")]
         public global::System.Drawing.Color AccentColour {
             get {
                 return ((global::System.Drawing.Color)(this["AccentColour"]));
@@ -121,7 +121,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("117, 117, 117")]
+        [global::System.Configuration.DefaultSettingValueAttribute("170, 170, 170")]
         public global::System.Drawing.Color DisplayTextColour {
             get {
                 return ((global::System.Drawing.Color)(this["DisplayTextColour"]));

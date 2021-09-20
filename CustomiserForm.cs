@@ -7,7 +7,7 @@ namespace TimeThing
 {
     public partial class CustomiserForm : Form
     {
-        private readonly int[] CustomColours = new int[] { 16748574, 4661504, 12632256, 11382468, 7697781, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 11909845, 6835543, 3498451, 7572842, 14075539 };
+        private readonly int[] CustomColours = new int[] { 3348992, 7877120, 12632256, 11382468, 11184810, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 11909845, 6835543, 3498451, 7572842, 14075539 };
         private readonly List<string> dateformats = new() { "No Formatting", "dd/MM/yyyy", "dd MMMM yyyy", "HH:mm", "HH:mm:ss", "dd MMMM yyyy HH:mm", "dddd, dd MMMM yyyy HH:mm" };
         public CustomiserForm()
         {

@@ -9,7 +9,8 @@ namespace TimeThing
 {
     public static class Program
     {
-        public static readonly string Version = "2.3.0b";
+        public static readonly string Version = "2.3.0";
+        public static string discordstatus = "Disabled";
         private static WidgetFormClass widgetForm = new();
         private static readonly WidgetMoverClass WidgetMoverClass = new();
         private static CustomiserForm Cumform = new();
@@ -107,9 +108,9 @@ namespace TimeThing
                 Program.PrimaryForm.Twentyfourmodecheckbox.BackColor = Properties.Settings.Default.AccentColour;
                 Program.PrimaryForm.pictureBox1.BackColor = Properties.Settings.Default.AccentColour;
                 Program.PrimaryForm.pictureBox2.BackColor = Properties.Settings.Default.AccentColour;
-                Program.PrimaryForm.label1.ForeColor = Properties.Settings.Default.TxtColour;
+                //Program.PrimaryForm.label1.ForeColor = Properties.Settings.Default.TxtColour;
                 Program.PrimaryForm.label3.ForeColor = Properties.Settings.Default.TxtColour;
-                Program.PrimaryForm.label1.BackColor = Properties.Settings.Default.AccentColour;
+                //Program.PrimaryForm.label1.BackColor = Properties.Settings.Default.AccentColour;
                 Program.PrimaryForm.label3.BackColor = Properties.Settings.Default.AccentColour;
                 if (!Program.PrimaryForm.CurrentTimeCheckBox.Checked) { 
                 Program.PrimaryForm.BasePicker.Value = basetime;

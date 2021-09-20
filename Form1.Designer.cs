@@ -53,7 +53,6 @@ namespace TimeThing
             this.OffsetDisplayText = new System.Windows.Forms.Label();
             this.WidgetOpen = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.CustomiseBtn = new System.Windows.Forms.Button();
             this.CopyUnixBtn = new System.Windows.Forms.Button();
             this.OffsetPicker = new System.Windows.Forms.DateTimePicker();
@@ -337,29 +336,14 @@ namespace TimeThing
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::TimeThing.Properties.Resources.UTD1;
-            this.pictureBox2.Location = new System.Drawing.Point(117, 9);
+            this.pictureBox2.Image = global::TimeThing.Properties.Resources.UTD_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(145, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(156, 108);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.ProgramName_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 120);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Universal\r\n\r\nTime\r\n\r\nDisplay";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.ProgramName_Click);
             // 
             // CustomiseBtn
             // 
@@ -418,7 +402,6 @@ namespace TimeThing
             this.Controls.Add(this.OffsetPicker);
             this.Controls.Add(this.CopyUnixBtn);
             this.Controls.Add(this.CustomiseBtn);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.WidgetOpen);
             this.Controls.Add(this.OffsetDisplayText);
@@ -482,7 +465,6 @@ namespace TimeThing
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.PictureBox pictureBox2;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label LBTZ;
         public System.Windows.Forms.Label OBTZ;
         private System.Windows.Forms.Button CopyUnixBtn;
