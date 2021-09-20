@@ -73,7 +73,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("213, 186, 181")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DodgerBlue")]
         public global::System.Drawing.Color MainColour {
             get {
                 return ((global::System.Drawing.Color)(this["MainColour"]));
@@ -85,7 +85,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("87, 77, 104")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 33, 71")]
         public global::System.Drawing.Color AccentColour {
             get {
                 return ((global::System.Drawing.Color)(this["AccentColour"]));
@@ -97,7 +97,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("106, 141, 115")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Silver")]
         public global::System.Drawing.Color TimesColour {
             get {
                 return ((global::System.Drawing.Color)(this["TimesColour"]));
@@ -109,7 +109,7 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("147, 198, 214")]
+        [global::System.Configuration.DefaultSettingValueAttribute("196, 174, 173")]
         public global::System.Drawing.Color TxtColour {
             get {
                 return ((global::System.Drawing.Color)(this["TxtColour"]));
@@ -121,13 +121,49 @@ namespace TimeThing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("211, 97, 53")]
+        [global::System.Configuration.DefaultSettingValueAttribute("117, 117, 117")]
         public global::System.Drawing.Color DisplayTextColour {
             get {
                 return ((global::System.Drawing.Color)(this["DisplayTextColour"]));
             }
             set {
                 this["DisplayTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Discord {
+            get {
+                return ((bool)(this["Discord"]));
+            }
+            set {
+                this["Discord"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("No Formatting")]
+        public string UnixFormat {
+            get {
+                return ((string)(this["UnixFormat"]));
+            }
+            set {
+                this["UnixFormat"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoRun {
+            get {
+                return ((bool)(this["AutoRun"]));
+            }
+            set {
+                this["AutoRun"] = value;
             }
         }
     }

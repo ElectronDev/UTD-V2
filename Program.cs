@@ -9,17 +9,19 @@ namespace TimeThing
 {
     public static class Program
     {
+        public static readonly string Version = "2.3.0b";
         private static WidgetFormClass widgetForm = new();
-        private static readonly WidgetMoverClass widgetMoverClass = new();
-        private static readonly TimeManager timeManager = new();
-        private static TimeManager tM = timeManager;
-        private static CustomiserForm cumform = new();
+        private static readonly WidgetMoverClass WidgetMoverClass = new();
+        private static CustomiserForm Cumform = new();
+        private static FormattingHelp helpForm = new();
+        private static TimeManager tM = new();
 
         public static Form1 PrimaryForm { get; set; }
-        public static WidgetMoverClass WidgetMover { get; set; } = widgetMoverClass;
+        public static WidgetMoverClass WidgetMover { get; set; } = WidgetMoverClass;
         public static WidgetFormClass WidgetForm { get => widgetForm; set => widgetForm = value; }
+        public static CustomiserForm CumForm { get => Cumform; set => Cumform = value; }
         public static TimeManager TM { get => tM; set => tM = value; }
-        public static CustomiserForm CumForm { get => cumform; set => cumform = value; }
+        public static FormattingHelp HelpForm { get => helpForm; set => helpForm = value; }
 
         [STAThread]
         static void Main()
@@ -31,10 +33,12 @@ namespace TimeThing
             Application.Run(PrimaryForm = new Form1());
         }
     }
+
     public class TimeManager
     {
         private static Thread loopthread;
         private bool threadactive = false;
+        public string displayedunix;
         public DateTime lastdate;
         public DateTime storeddate;
         public Dictionary<double, string> Conversions = new();
@@ -43,11 +47,13 @@ namespace TimeThing
             string formatmode;
             if (!Properties.Settings.Default.twentyfourmode) { formatmode = "ddd MMM %d | hh:mm:ss tt"; }
             else { formatmode = "ddd MMM %d | HH:mm:ss"; }
-            string unixsecs = ("Current Unix Time: " + DateTimeOffset.UtcNow.ToUnixTimeSeconds());
             DateTime basetime;
             DateTime offsettime;
+            DateTimeOffset DT = new(lastdate);
+            displayedunix = DT.ToUnixTimeSeconds().ToString();
             basetime = lastdate.AddHours(Properties.Settings.Default.BaseTimeZone);
             offsettime = lastdate.AddHours(Properties.Settings.Default.OffsetTimeZone);
+            string unixsecs = "Displayed Unix Time: " + displayedunix; 
             string LTD = basetime.ToString(formatmode);
             int LTB = (int)basetime.TimeOfDay.TotalSeconds;
             string OTD = offsettime.ToString(formatmode);
@@ -105,6 +111,10 @@ namespace TimeThing
                 Program.PrimaryForm.label3.ForeColor = Properties.Settings.Default.TxtColour;
                 Program.PrimaryForm.label1.BackColor = Properties.Settings.Default.AccentColour;
                 Program.PrimaryForm.label3.BackColor = Properties.Settings.Default.AccentColour;
+                if (!Program.PrimaryForm.CurrentTimeCheckBox.Checked) { 
+                Program.PrimaryForm.BasePicker.Value = basetime;
+                Program.PrimaryForm.OffsetPicker.Value = offsettime;
+                }
             });
             MethodInvoker WFinvoke = new(delegate () {
                 Program.WidgetForm.splitter1.BackColor = Properties.Settings.Default.AccentColour;
@@ -129,10 +139,21 @@ namespace TimeThing
                 Program.CumForm.TC2.ForeColor = Properties.Settings.Default.TimesColour;
                 Program.CumForm.Gen.ForeColor = Properties.Settings.Default.TxtColour;
             });
+            MethodInvoker FHinvoke = new(delegate ()
+            {
+                Program.HelpForm.BackColor = Properties.Settings.Default.MainColour;
+                Program.HelpForm.label1.ForeColor = Properties.Settings.Default.DisplayTextColour;
+                Program.HelpForm.label2.ForeColor = Properties.Settings.Default.AccentColour;
+                Program.HelpForm.label3.ForeColor = Properties.Settings.Default.DisplayTextColour;
+                Program.HelpForm.label4.ForeColor = Properties.Settings.Default.DisplayTextColour;
+                Program.HelpForm.label5.ForeColor = Properties.Settings.Default.DisplayTextColour;
+            });
             if (!Program.PrimaryForm.IsDisposed && Program.PrimaryForm.Visible) { Program.PrimaryForm.Invoke(PMinvoke); }
             if (!Program.WidgetForm.IsDisposed && Program.WidgetForm.Visible) { Program.WidgetForm.Invoke(WFinvoke); }
             if (!Program.CumForm.IsDisposed && Program.CumForm.Visible) { Program.CumForm.Invoke(CFinvoke); }
+            if (!Program.HelpForm.IsDisposed && Program.HelpForm.Visible) { Program.HelpForm.Invoke(FHinvoke); }
         }
+        
         private void Istartclock()
         {
             while (threadactive)

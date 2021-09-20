@@ -73,6 +73,26 @@ namespace TimeThing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_211 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_214 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_214", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UTD1 {
             get {
                 object obj = ResourceManager.GetObject("UTD1", resourceCulture);

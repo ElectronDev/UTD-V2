@@ -66,26 +66,30 @@ namespace TimeThing
         {
             if (CurrentTimeCheckBox.Checked)
             {
-                UnixLabel.Visible = true;
                 OffsetTrackBar.Enabled = false;
                 LocalTrackBar.Enabled = false;
                 ResetButton.Visible = false;
                 WidgetOpen.Visible = true;
+                BasePicker.Visible = false;
+                OffsetPicker.Visible = false;
                 Program.TM.Startclock();
             }
             else {
-                UnixLabel.Visible = false;
                 OffsetTrackBar.Enabled = true;
                 LocalTrackBar.Enabled = true;
                 ResetButton.Visible = true;
                 WidgetOpen.Visible = false;
+                BasePicker.Visible = true;
+                OffsetPicker.Visible = true;
                 Program.TM.Stopclock();
+                Program.TM.Refresh();
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.TM.Stopclock();
+            //Discord stop function thing
             if (!Program.WidgetForm.IsDisposed) { Program.WidgetForm.Dispose(); }
             if (!Program.WidgetMover.IsDisposed) { Program.WidgetMover.Dispose(); }
             Program.PrimaryForm.Dispose();
@@ -200,6 +204,35 @@ namespace TimeThing
         {
             Program.CumForm = new CustomiserForm();
             Program.CumForm.Show();
+        }
+
+        private void CopyUnix_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.UnixFormat == "dd/MM/yyyy") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:d>"); }
+            else if (Properties.Settings.Default.UnixFormat == "dd MMMM yyyy") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:D>"); }
+            else if (Properties.Settings.Default.UnixFormat == "HH:mm") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:t>"); }
+            else if(Properties.Settings.Default.UnixFormat == "HH:mm:ss") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:T>"); }
+            else if(Properties.Settings.Default.UnixFormat == "dd MMMM yyyy HH:mm") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:f>"); }
+            else if(Properties.Settings.Default.UnixFormat == "dddd, dd MMMM yyyy HH:mm") { Clipboard.SetText($"<t:{Program.TM.displayedunix}:F>"); }
+            else { Clipboard.SetText(Program.TM.displayedunix); }
+        }
+
+        private void BasePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (!(Program.TM.lastdate.AddHours(Properties.Settings.Default.BaseTimeZone) == Program.PrimaryForm.BasePicker.Value))
+            {
+                Program.TM.lastdate = BasePicker.Value.AddHours(Properties.Settings.Default.BaseTimeZone * -1);
+                Program.TM.Refresh();
+            }
+        }
+
+        private void OffsetPicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (!(Program.TM.lastdate.AddHours(Properties.Settings.Default.OffsetTimeZone) == Program.PrimaryForm.OffsetPicker.Value))
+            {
+                Program.TM.lastdate = OffsetPicker.Value.AddHours(Properties.Settings.Default.OffsetTimeZone * -1);
+                Program.TM.Refresh();
+            }
         }
     }
 }

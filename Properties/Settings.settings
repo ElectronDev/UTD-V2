@@ -15,19 +15,28 @@
       <Value Profile="(Default)">BR</Value>
     </Setting>
     <Setting Name="MainColour" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">213, 186, 181</Value>
+      <Value Profile="(Default)">DodgerBlue</Value>
     </Setting>
     <Setting Name="AccentColour" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">87, 77, 104</Value>
+      <Value Profile="(Default)">0, 33, 71</Value>
     </Setting>
     <Setting Name="TimesColour" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">106, 141, 115</Value>
+      <Value Profile="(Default)">Silver</Value>
     </Setting>
     <Setting Name="TxtColour" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">147, 198, 214</Value>
+      <Value Profile="(Default)">196, 174, 173</Value>
     </Setting>
     <Setting Name="DisplayTextColour" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">211, 97, 53</Value>
+      <Value Profile="(Default)">117, 117, 117</Value>
+    </Setting>
+    <Setting Name="Discord" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UnixFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No Formatting</Value>
+    </Setting>
+    <Setting Name="AutoRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

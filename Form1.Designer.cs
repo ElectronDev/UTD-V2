@@ -55,6 +55,9 @@ namespace TimeThing
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CustomiseBtn = new System.Windows.Forms.Button();
+            this.CopyUnixBtn = new System.Windows.Forms.Button();
+            this.OffsetPicker = new System.Windows.Forms.DateTimePicker();
+            this.BasePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.OffsetTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocalTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -169,7 +172,7 @@ namespace TimeThing
             // ResetButton
             // 
             this.ResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetButton.Location = new System.Drawing.Point(1180, 429);
+            this.ResetButton.Location = new System.Drawing.Point(1099, 430);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(75, 23);
             this.ResetButton.TabIndex = 7;
@@ -369,6 +372,41 @@ namespace TimeThing
             this.CustomiseBtn.UseVisualStyleBackColor = true;
             this.CustomiseBtn.Click += new System.EventHandler(this.CustomiseBtn_Click);
             // 
+            // CopyUnixBtn
+            // 
+            this.CopyUnixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CopyUnixBtn.Location = new System.Drawing.Point(1180, 430);
+            this.CopyUnixBtn.Name = "CopyUnixBtn";
+            this.CopyUnixBtn.Size = new System.Drawing.Size(75, 23);
+            this.CopyUnixBtn.TabIndex = 28;
+            this.CopyUnixBtn.Text = "Copy Unix";
+            this.CopyUnixBtn.UseVisualStyleBackColor = true;
+            this.CopyUnixBtn.Click += new System.EventHandler(this.CopyUnix_Click);
+            // 
+            // OffsetPicker
+            // 
+            this.OffsetPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OffsetPicker.CustomFormat = "MMMM dd, yyyy  |  hh:mm:ss";
+            this.OffsetPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OffsetPicker.Location = new System.Drawing.Point(1053, 289);
+            this.OffsetPicker.Name = "OffsetPicker";
+            this.OffsetPicker.Size = new System.Drawing.Size(200, 23);
+            this.OffsetPicker.TabIndex = 29;
+            this.OffsetPicker.Visible = false;
+            this.OffsetPicker.ValueChanged += new System.EventHandler(this.OffsetPicker_ValueChanged);
+            // 
+            // BasePicker
+            // 
+            this.BasePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BasePicker.CustomFormat = "MMMM dd, yyyy  |  hh:mm:ss";
+            this.BasePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.BasePicker.Location = new System.Drawing.Point(1053, 88);
+            this.BasePicker.Name = "BasePicker";
+            this.BasePicker.Size = new System.Drawing.Size(200, 23);
+            this.BasePicker.TabIndex = 30;
+            this.BasePicker.Visible = false;
+            this.BasePicker.ValueChanged += new System.EventHandler(this.BasePicker_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -376,6 +414,9 @@ namespace TimeThing
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 460);
+            this.Controls.Add(this.BasePicker);
+            this.Controls.Add(this.OffsetPicker);
+            this.Controls.Add(this.CopyUnixBtn);
             this.Controls.Add(this.CustomiseBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -444,6 +485,9 @@ namespace TimeThing
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label LBTZ;
         public System.Windows.Forms.Label OBTZ;
+        private System.Windows.Forms.Button CopyUnixBtn;
+        public System.Windows.Forms.DateTimePicker OffsetPicker;
+        public System.Windows.Forms.DateTimePicker BasePicker;
     }
 }
 
