@@ -9,6 +9,7 @@ namespace TimeThing
     {
         private readonly int[] CustomColours = new int[] { 3348992, 7877120, 12632256, 11382468, 11184810, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 11909845, 6835543, 3498451, 7572842, 14075539 };
         private readonly List<string> dateformats = new() { "No Formatting", "dd/MM/yyyy", "dd MMMM yyyy", "HH:mm", "HH:mm:ss", "dd MMMM yyyy HH:mm", "dddd, dd MMMM yyyy HH:mm" };
+        public bool loaded = false;
         public CustomiserForm()
         {
             InitializeComponent();
@@ -16,8 +17,16 @@ namespace TimeThing
         }
         private void CustomiserForm_Shown(object sender, EventArgs e)
         {
+            PrimSelector.Color = Properties.Settings.Default.MainColour;
+            SecSelector.Color = Properties.Settings.Default.AccentColour;
+            TC1Selector.Color = Properties.Settings.Default.TimesColour;
+            TC2Selector.Color = Properties.Settings.Default.TxtColour;
+            GTCSelector.Color = Properties.Settings.Default.DisplayTextColour;
+            loaded = true;
             FormatBox.SelectedIndex = dateformats.IndexOf(Properties.Settings.Default.UnixFormat);
             Autorun.Checked = Properties.Settings.Default.AutoRun;
+            MinimizeBox.Checked = Properties.Settings.Default.SystemTray;
+            DiscordIntergrationStatus.Text = Program.Discordstatus;
         }
             private void PrimBtn_Click(object sender, EventArgs e)
         {
@@ -88,6 +97,31 @@ namespace TimeThing
                 }
                 catch {}
             }
+            Properties.Settings.Default.Save();
+        }
+
+        private void DiscordIntToggle_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Discord)
+            {
+                Properties.Settings.Default.Discord = false;
+                Program.Discordstatus = "Discord Intergration Status: Off";
+                Program.TM.StopDiscordClock();
+            }
+            else
+            {
+                Properties.Settings.Default.Discord = true;
+                if (!Program.TM.discordthreadactive) {
+                Program.Discordstatus = "Discord Intergration Status: Starting";
+                Program.TM.StartDiscordClock();
+                }
+            }
+            Properties.Settings.Default.Save();
+        }
+
+        private void MinimizeBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SystemTray = MinimizeBox.Checked;
             Properties.Settings.Default.Save();
         }
     }

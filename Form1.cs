@@ -58,7 +58,13 @@ namespace TimeThing
             OBTZ.Text = "Offset Timezone: " + Properties.Settings.Default.OffsetTimeZone.ToString() + " UTC";
             LTZD.Text = Program.TM.Conversions[Properties.Settings.Default.BaseTimeZone];
             OTZD.Text = Program.TM.Conversions[Properties.Settings.Default.OffsetTimeZone];
-            Program.TM.Startclock();
+            Program.TM.StartMainLoop();
+            Program.TM.StartTimeclock();
+            if (Properties.Settings.Default.Discord)
+            {
+                Program.Discordstatus = "Discord Intergration Status: Starting";
+                Program.TM.StartDiscordClock();
+            }
         }
 
 
@@ -72,7 +78,7 @@ namespace TimeThing
                 WidgetOpen.Visible = true;
                 BasePicker.Visible = false;
                 OffsetPicker.Visible = false;
-                Program.TM.Startclock();
+                Program.TM.StartTimeclock();
             }
             else {
                 OffsetTrackBar.Enabled = true;
@@ -81,15 +87,16 @@ namespace TimeThing
                 WidgetOpen.Visible = false;
                 BasePicker.Visible = true;
                 OffsetPicker.Visible = true;
-                Program.TM.Stopclock();
-                Program.TM.Refresh();
+                Program.TM.StopTimeclock();
+                Program.TM.TimeRefresh();
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.TM.Stopclock();
-            //Discord stop function thing
+            Program.TM.StopTimeclock();
+            Program.TM.StopDiscordClock();
+            Program.TM.StopMainLoop();
             if (!Program.WidgetForm.IsDisposed) { Program.WidgetForm.Dispose(); }
             if (!Program.WidgetMover.IsDisposed) { Program.WidgetMover.Dispose(); }
             Program.PrimaryForm.Dispose();
@@ -99,23 +106,23 @@ namespace TimeThing
         {
             Properties.Settings.Default.twentyfourmode = Twentyfourmodecheckbox.Checked;
             Properties.Settings.Default.Save();
-            Program.TM.Refresh();
+            Program.TM.TimeRefresh();
         }
 
         private void LocalTrackBar_MouseCaptureChanged(object sender, EventArgs e)
         {
-            Program.TM.lastdate = Program.TM.lastdate.Date.AddHours(Properties.Settings.Default.BaseTimeZone*-1).AddSeconds(LocalTrackBar.Value);
-            Program.TM.Refresh();
+            Program.TM.lastdate = Program.TM.lastdate.Date.AddHours(Properties.Settings.Default.BaseTimeZone * -1).AddSeconds(LocalTrackBar.Value);
+            Program.TM.TimeRefresh();
         }
         private void OffsetTrackBar_MouseCaptureChanged(object sender, EventArgs e)
         {
             Program.TM.lastdate = Program.TM.lastdate.Date.AddHours(Properties.Settings.Default.OffsetTimeZone * -1).AddSeconds(OffsetTrackBar.Value);
-            Program.TM.Refresh();
+            Program.TM.TimeRefresh();
         }
         private void ResetButton_Click(object sender, EventArgs e)
         {
             Program.TM.lastdate = Program.TM.storeddate;
-            Program.TM.Refresh();
+            Program.TM.TimeRefresh();
         }
 
 
@@ -132,7 +139,8 @@ namespace TimeThing
             if (Properties.Settings.Default.BaseTimeZone >= 14) { BaseAddBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             BaseSubBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
+            Program.DS.RunActivityUpdates(DateTime.UtcNow);
         }
 
         private void BaseSubBtn_Click(object sender, EventArgs e)
@@ -148,7 +156,8 @@ namespace TimeThing
             if (Properties.Settings.Default.BaseTimeZone <= -12) { BaseSubBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             BaseAddBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
+            Program.DS.RunActivityUpdates(DateTime.UtcNow);
         }
 
         private void OffsetAddBtn_Click(object sender, EventArgs e)
@@ -164,7 +173,8 @@ namespace TimeThing
             if (Properties.Settings.Default.OffsetTimeZone >= 14) { OffsetAddBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             OffsetSubBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
+            Program.DS.RunActivityUpdates(DateTime.UtcNow);
         }
 
         private void OffsetSubBtn_Click(object sender, EventArgs e)
@@ -180,7 +190,8 @@ namespace TimeThing
             if (Properties.Settings.Default.OffsetTimeZone <= -12) { OffsetSubBtn.Enabled = false; }
             Properties.Settings.Default.Save();
             OffsetAddBtn.Enabled = true;
-            if (!CurrentTimeCheckBox.Checked) { Program.TM.Refresh(); }
+            if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
+            Program.DS.RunActivityUpdates(DateTime.UtcNow);
         }
 
         private void ProgramName_Click(object sender, EventArgs e)
@@ -219,20 +230,38 @@ namespace TimeThing
 
         private void BasePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (!(Program.TM.lastdate.AddHours(Properties.Settings.Default.BaseTimeZone) == Program.PrimaryForm.BasePicker.Value))
+            if (!(Program.TM.lastdate == Program.PrimaryForm.BasePicker.Value))
             {
-                Program.TM.lastdate = BasePicker.Value.AddHours(Properties.Settings.Default.BaseTimeZone * -1);
-                Program.TM.Refresh();
+                Program.TM.lastdate = BasePicker.Value.AddHours(Properties.Settings.Default.BaseTimeZone * -1); //doesn't store to variable correctly
+                Program.TM.TimeRefresh();
             }
         }
 
         private void OffsetPicker_ValueChanged(object sender, EventArgs e)
         {
-            if (!(Program.TM.lastdate.AddHours(Properties.Settings.Default.OffsetTimeZone) == Program.PrimaryForm.OffsetPicker.Value))
+            if (!(Program.TM.lastdate == Program.PrimaryForm.OffsetPicker.Value))
             {
                 Program.TM.lastdate = OffsetPicker.Value.AddHours(Properties.Settings.Default.OffsetTimeZone * -1);
-                Program.TM.Refresh();
+                Program.TM.TimeRefresh();
             }
+        }
+
+        private void Form1_LocationChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized && Properties.Settings.Default.SystemTray) 
+            {
+                Program.PrimaryForm.Hide();
+                Program.PrimaryForm.Minimize.Visible = true;
+                Program.PrimaryForm.Minimize.ShowBalloonTip(5);
+            }
+        }
+
+        private void Minimize_BalloonTipClicked(object sender, EventArgs e)
+        {
+            Program.PrimaryForm.Show();
+            Program.PrimaryForm.WindowState = FormWindowState.Normal;
+            Program.PrimaryForm.Minimize.Visible = false;
+            Program.PrimaryForm.Activate();
         }
     }
 }

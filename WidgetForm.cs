@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TimeThing
@@ -164,7 +158,7 @@ namespace TimeThing
         {
             Properties.Settings.Default.twentyfourmode = Twentyfourmodecheckbox.Checked;
             Properties.Settings.Default.Save();
-            Program.TM.Refresh();
+            Program.TM.TimeRefresh();
         }
 
         private void Reposition_Click(object sender, EventArgs e)

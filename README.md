@@ -21,7 +21,7 @@ yes.
 yes.
 ### Does this work?
 yes.
-### Does Electrondev have a life?
+### Does ElectronDev have a life?
 no.
 ### Then why does this exist?
 yes.
