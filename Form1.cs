@@ -140,7 +140,9 @@ namespace TimeThing
             Properties.Settings.Default.Save();
             BaseSubBtn.Enabled = true;
             if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
+            if (Properties.Settings.Default.Discord) {
             Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            }
         }
 
         private void BaseSubBtn_Click(object sender, EventArgs e)
@@ -157,7 +159,10 @@ namespace TimeThing
             Properties.Settings.Default.Save();
             BaseAddBtn.Enabled = true;
             if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
-            Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            if (Properties.Settings.Default.Discord)
+            {
+                Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            }
         }
 
         private void OffsetAddBtn_Click(object sender, EventArgs e)
@@ -174,7 +179,10 @@ namespace TimeThing
             Properties.Settings.Default.Save();
             OffsetSubBtn.Enabled = true;
             if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
-            Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            if (Properties.Settings.Default.Discord)
+            {
+                Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            }
         }
 
         private void OffsetSubBtn_Click(object sender, EventArgs e)
@@ -191,7 +199,10 @@ namespace TimeThing
             Properties.Settings.Default.Save();
             OffsetAddBtn.Enabled = true;
             if (!CurrentTimeCheckBox.Checked) { Program.TM.TimeRefresh(); }
-            Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            if (Properties.Settings.Default.Discord)
+            {
+                Program.DS.RunActivityUpdates(DateTime.UtcNow);
+            }
         }
 
         private void ProgramName_Click(object sender, EventArgs e)
