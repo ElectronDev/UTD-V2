@@ -6,7 +6,17 @@ using System.Windows.Forms;
 namespace TimeThing
 {
     public class DiscordSys {
-        public Discord.Discord discord = new(869621858016829561, (UInt64)Discord.CreateFlags.NoRequireDiscord);
+        public Discord.Discord discord;
+        public void Setup()
+        {
+            try {
+            discord = new(869621858016829561, (UInt64)Discord.CreateFlags.NoRequireDiscord);
+            }
+            catch
+            {
+                Program.Discordstatus = "Discord Intergration Status: Error";
+            }
+        }
         public Discord.Activity activity = new()
         {
             Assets =
@@ -20,6 +30,10 @@ namespace TimeThing
         };
         public void RunActivityUpdates(DateTime currenttime) 
         {
+            if (Program.DS.discord == null)
+            {
+                return;
+            }
             string timeformatmode = "hh:mm tt";
             DateTime basetime;
             basetime = currenttime.AddHours(Properties.Settings.Default.BaseTimeZone);
@@ -36,7 +50,9 @@ namespace TimeThing
                 {
                     Program.Discordstatus = "Discord Intergration Status: " + result.ToString();
                 }
-            });
+            }
+
+        );
         }
         
     }
@@ -193,7 +209,13 @@ namespace TimeThing
                 });
                 if (discordthreadactive == true)
                 {
+                    try {
                     Program.DS.discord.RunCallbacks();
+                    }
+                    catch
+                    {
+                        Program.Discordstatus = "Discord Intergration Status: Error running Callbacks";
+                    }
                 }
                 try
                 {
@@ -266,6 +288,7 @@ namespace TimeThing
         public void StartDiscordClock()
         {
             Program.DS = new();
+            Program.DS.Setup();
             discordthreadactive = true;
             discordloopthread = new Thread(DiscordClock);
             discordloopthread.Start();

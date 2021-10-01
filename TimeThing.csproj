@@ -8,7 +8,7 @@
     <Authors>ElectronDev</Authors>
     <Company>ElectronDev Industries</Company>
     <Copyright>©️ElectronDev 2021</Copyright>
-    <Version>2.3.0</Version>
+    <Version>2.3.0.2</Version>
     <StartupObject>TimeThing.Program</StartupObject>
     <Description>I got lazy</Description>
     <NeutralLanguage>en-GB</NeutralLanguage>
@@ -17,6 +17,7 @@
     <PackageTags>ImagineWritingCodeBecauseImLazy</PackageTags>
     <PackageId>MultiTime Viewer</PackageId>
     <AssemblyName>MultiTime Viewer</AssemblyName>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -49,6 +50,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="image00000.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

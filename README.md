@@ -29,4 +29,4 @@ yes.
 
 
 #### All images in this program are created and owned by [ElectronDev](https://github.com/ElectronDevDude/)
-##### Tripieces © 2021 by ElectronDev is licensed under CC BY-NC-ND 4.0 
+##### Trirings © 2021 by ElectronDev is licensed under CC BY-NC-ND 4.0 

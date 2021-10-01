@@ -243,7 +243,7 @@ namespace TimeThing
         {
             if (!(Program.TM.lastdate == Program.PrimaryForm.BasePicker.Value))
             {
-                Program.TM.lastdate = BasePicker.Value.AddHours(Properties.Settings.Default.BaseTimeZone * -1); //doesn't store to variable correctly
+                Program.TM.lastdate = BasePicker.Value.AddHours(Properties.Settings.Default.BaseTimeZone * -1);
                 Program.TM.TimeRefresh();
             }
         }
