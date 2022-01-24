@@ -7,8 +7,8 @@
     <ApplicationIcon>image00027.ico</ApplicationIcon>
     <Authors>ElectronDev</Authors>
     <Company>ElectronDev Industries</Company>
-    <Copyright>©️ElectronDev 2021</Copyright>
-    <Version>2.3.0.2</Version>
+    <Copyright>©️ElectronDev 2022</Copyright>
+    <Version>2.3.1</Version>
     <StartupObject>TimeThing.Program</StartupObject>
     <Description>I got lazy</Description>
     <NeutralLanguage>en-GB</NeutralLanguage>

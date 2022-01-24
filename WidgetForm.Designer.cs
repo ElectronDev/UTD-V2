@@ -50,9 +50,10 @@ namespace TimeThing
             // 
             this.ReturnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ReturnBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.ReturnBtn.Location = new System.Drawing.Point(482, 209);
+            this.ReturnBtn.Location = new System.Drawing.Point(689, 348);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ReturnBtn.Name = "ReturnBtn";
-            this.ReturnBtn.Size = new System.Drawing.Size(56, 25);
+            this.ReturnBtn.Size = new System.Drawing.Size(80, 42);
             this.ReturnBtn.TabIndex = 2;
             this.ReturnBtn.Text = "Return";
             this.ReturnBtn.UseVisualStyleBackColor = false;
@@ -64,20 +65,22 @@ namespace TimeThing
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 200);
+            this.splitter1.Location = new System.Drawing.Point(0, 334);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(550, 44);
+            this.splitter1.Size = new System.Drawing.Size(786, 73);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
             // BaseDisplayText
             // 
             this.BaseDisplayText.AutoSize = true;
-            this.BaseDisplayText.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.BaseDisplayText.Font = new System.Drawing.Font("Shadows Into Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BaseDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.BaseDisplayText.Location = new System.Drawing.Point(12, 31);
+            this.BaseDisplayText.Location = new System.Drawing.Point(17, 40);
+            this.BaseDisplayText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BaseDisplayText.Name = "BaseDisplayText";
-            this.BaseDisplayText.Size = new System.Drawing.Size(149, 24);
+            this.BaseDisplayText.Size = new System.Drawing.Size(193, 57);
             this.BaseDisplayText.TabIndex = 26;
             this.BaseDisplayText.Text = "Base Display:";
             // 
@@ -86,10 +89,11 @@ namespace TimeThing
             this.LocalTimeDisplay.AutoSize = true;
             this.LocalTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LocalTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
-            this.LocalTimeDisplay.Location = new System.Drawing.Point(184, 24);
+            this.LocalTimeDisplay.Location = new System.Drawing.Point(263, 40);
+            this.LocalTimeDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LocalTimeDisplay.Name = "LocalTimeDisplay";
             this.LocalTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LocalTimeDisplay.Size = new System.Drawing.Size(82, 31);
+            this.LocalTimeDisplay.Size = new System.Drawing.Size(123, 47);
             this.LocalTimeDisplay.TabIndex = 25;
             this.LocalTimeDisplay.Text = "00:00";
             // 
@@ -99,10 +103,11 @@ namespace TimeThing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LocalTrackBar.Enabled = false;
             this.LocalTrackBar.LargeChange = 7200;
-            this.LocalTrackBar.Location = new System.Drawing.Point(12, 58);
+            this.LocalTrackBar.Location = new System.Drawing.Point(17, 97);
+            this.LocalTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LocalTrackBar.Maximum = 86399;
             this.LocalTrackBar.Name = "LocalTrackBar";
-            this.LocalTrackBar.Size = new System.Drawing.Size(526, 45);
+            this.LocalTrackBar.Size = new System.Drawing.Size(751, 69);
             this.LocalTrackBar.SmallChange = 3600;
             this.LocalTrackBar.TabIndex = 24;
             this.LocalTrackBar.Value = 1;
@@ -110,11 +115,12 @@ namespace TimeThing
             // OffsetDisplayText
             // 
             this.OffsetDisplayText.AutoSize = true;
-            this.OffsetDisplayText.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.OffsetDisplayText.Font = new System.Drawing.Font("Shadows Into Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetDisplayText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(97)))), ((int)(((byte)(53)))));
-            this.OffsetDisplayText.Location = new System.Drawing.Point(12, 125);
+            this.OffsetDisplayText.Location = new System.Drawing.Point(17, 196);
+            this.OffsetDisplayText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OffsetDisplayText.Name = "OffsetDisplayText";
-            this.OffsetDisplayText.Size = new System.Drawing.Size(166, 24);
+            this.OffsetDisplayText.Size = new System.Drawing.Size(209, 57);
             this.OffsetDisplayText.TabIndex = 29;
             this.OffsetDisplayText.Text = "Offset Display:";
             // 
@@ -123,10 +129,11 @@ namespace TimeThing
             this.OffsetTimeDisplay.AutoSize = true;
             this.OffsetTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(141)))), ((int)(((byte)(115)))));
-            this.OffsetTimeDisplay.Location = new System.Drawing.Point(184, 118);
+            this.OffsetTimeDisplay.Location = new System.Drawing.Point(263, 197);
+            this.OffsetTimeDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OffsetTimeDisplay.Name = "OffsetTimeDisplay";
             this.OffsetTimeDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OffsetTimeDisplay.Size = new System.Drawing.Size(82, 31);
+            this.OffsetTimeDisplay.Size = new System.Drawing.Size(123, 47);
             this.OffsetTimeDisplay.TabIndex = 28;
             this.OffsetTimeDisplay.Text = "00:00";
             // 
@@ -136,10 +143,11 @@ namespace TimeThing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OffsetTrackBar.Enabled = false;
             this.OffsetTrackBar.LargeChange = 7200;
-            this.OffsetTrackBar.Location = new System.Drawing.Point(12, 152);
+            this.OffsetTrackBar.Location = new System.Drawing.Point(17, 253);
+            this.OffsetTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetTrackBar.Maximum = 86399;
             this.OffsetTrackBar.Name = "OffsetTrackBar";
-            this.OffsetTrackBar.Size = new System.Drawing.Size(526, 45);
+            this.OffsetTrackBar.Size = new System.Drawing.Size(751, 69);
             this.OffsetTrackBar.SmallChange = 3600;
             this.OffsetTrackBar.TabIndex = 27;
             this.OffsetTrackBar.Value = 1;
@@ -149,11 +157,12 @@ namespace TimeThing
             this.OBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OBTZ.AutoSize = true;
             this.OBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
-            this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OBTZ.Font = new System.Drawing.Font("Permanent Marker", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
-            this.OBTZ.Location = new System.Drawing.Point(195, 213);
+            this.OBTZ.Location = new System.Drawing.Point(279, 355);
+            this.OBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OBTZ.Name = "OBTZ";
-            this.OBTZ.Size = new System.Drawing.Size(161, 21);
+            this.OBTZ.Size = new System.Drawing.Size(258, 35);
             this.OBTZ.TabIndex = 31;
             this.OBTZ.Text = "Offset Timezone: 00";
             // 
@@ -162,11 +171,12 @@ namespace TimeThing
             this.LBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LBTZ.AutoSize = true;
             this.LBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(77)))), ((int)(((byte)(104)))));
-            this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBTZ.Font = new System.Drawing.Font("Permanent Marker", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
-            this.LBTZ.Location = new System.Drawing.Point(12, 213);
+            this.LBTZ.Location = new System.Drawing.Point(17, 355);
+            this.LBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBTZ.Name = "LBTZ";
-            this.LBTZ.Size = new System.Drawing.Size(150, 21);
+            this.LBTZ.Size = new System.Drawing.Size(236, 35);
             this.LBTZ.TabIndex = 30;
             this.LBTZ.Text = "Base Timezone: 00";
             // 
@@ -177,9 +187,10 @@ namespace TimeThing
             this.Twentyfourmodecheckbox.AutoSize = true;
             this.Twentyfourmodecheckbox.BackColor = System.Drawing.SystemColors.Control;
             this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.Black;
-            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(411, 209);
+            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(586, 355);
+            this.Twentyfourmodecheckbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
-            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(36, 25);
+            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(52, 35);
             this.Twentyfourmodecheckbox.TabIndex = 0;
             this.Twentyfourmodecheckbox.Text = "24h";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
@@ -189,9 +200,10 @@ namespace TimeThing
             // Reposition
             // 
             this.Reposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Reposition.Location = new System.Drawing.Point(453, 209);
+            this.Reposition.Location = new System.Drawing.Point(647, 348);
+            this.Reposition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Reposition.Name = "Reposition";
-            this.Reposition.Size = new System.Drawing.Size(23, 25);
+            this.Reposition.Size = new System.Drawing.Size(33, 42);
             this.Reposition.TabIndex = 1;
             this.Reposition.Text = "↔️";
             this.Reposition.UseVisualStyleBackColor = true;
@@ -200,10 +212,10 @@ namespace TimeThing
             // 
             // WidgetFormClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(186)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(550, 244);
+            this.ClientSize = new System.Drawing.Size(786, 407);
             this.ControlBox = false;
             this.Controls.Add(this.Reposition);
             this.Controls.Add(this.Twentyfourmodecheckbox);
@@ -219,6 +231,7 @@ namespace TimeThing
             this.Controls.Add(this.splitter1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "WidgetFormClass";
             this.Opacity = 0.65D;
             this.ShowInTaskbar = false;

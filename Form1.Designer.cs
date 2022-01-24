@@ -71,10 +71,11 @@ namespace TimeThing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OffsetTrackBar.Enabled = false;
             this.OffsetTrackBar.LargeChange = 7200;
-            this.OffsetTrackBar.Location = new System.Drawing.Point(294, 318);
+            this.OffsetTrackBar.Location = new System.Drawing.Point(420, 530);
+            this.OffsetTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetTrackBar.Maximum = 86399;
             this.OffsetTrackBar.Name = "OffsetTrackBar";
-            this.OffsetTrackBar.Size = new System.Drawing.Size(959, 45);
+            this.OffsetTrackBar.Size = new System.Drawing.Size(1370, 69);
             this.OffsetTrackBar.SmallChange = 3600;
             this.OffsetTrackBar.TabIndex = 9;
             this.OffsetTrackBar.Value = 1;
@@ -86,10 +87,11 @@ namespace TimeThing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LocalTrackBar.Enabled = false;
             this.LocalTrackBar.LargeChange = 7200;
-            this.LocalTrackBar.Location = new System.Drawing.Point(288, 117);
+            this.LocalTrackBar.Location = new System.Drawing.Point(411, 195);
+            this.LocalTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LocalTrackBar.Maximum = 86399;
             this.LocalTrackBar.Name = "LocalTrackBar";
-            this.LocalTrackBar.Size = new System.Drawing.Size(967, 45);
+            this.LocalTrackBar.Size = new System.Drawing.Size(1381, 69);
             this.LocalTrackBar.SmallChange = 3600;
             this.LocalTrackBar.TabIndex = 8;
             this.LocalTrackBar.Value = 1;
@@ -99,11 +101,12 @@ namespace TimeThing
             // 
             this.LBTZ.AutoSize = true;
             this.LBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
-            this.LBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBTZ.Font = new System.Drawing.Font("Permanent Marker", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.LBTZ.Location = new System.Drawing.Point(12, 186);
+            this.LBTZ.Location = new System.Drawing.Point(17, 310);
+            this.LBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBTZ.Name = "LBTZ";
-            this.LBTZ.Size = new System.Drawing.Size(150, 21);
+            this.LBTZ.Size = new System.Drawing.Size(294, 43);
             this.LBTZ.TabIndex = 3;
             this.LBTZ.Text = "Base Timezone: 00";
             // 
@@ -113,9 +116,10 @@ namespace TimeThing
             this.OffsetTimeDisplay.AutoSize = true;
             this.OffsetTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(174)))), ((int)(((byte)(173)))));
-            this.OffsetTimeDisplay.Location = new System.Drawing.Point(296, 278);
+            this.OffsetTimeDisplay.Location = new System.Drawing.Point(423, 463);
+            this.OffsetTimeDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OffsetTimeDisplay.Name = "OffsetTimeDisplay";
-            this.OffsetTimeDisplay.Size = new System.Drawing.Size(98, 37);
+            this.OffsetTimeDisplay.Size = new System.Drawing.Size(145, 55);
             this.OffsetTimeDisplay.TabIndex = 5;
             this.OffsetTimeDisplay.Text = "00:00";
             // 
@@ -124,10 +128,12 @@ namespace TimeThing
             this.Twentyfourmodecheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Twentyfourmodecheckbox.AutoSize = true;
             this.Twentyfourmodecheckbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
+            this.Twentyfourmodecheckbox.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Twentyfourmodecheckbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(93, 388);
+            this.Twentyfourmodecheckbox.Location = new System.Drawing.Point(133, 637);
+            this.Twentyfourmodecheckbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Twentyfourmodecheckbox.Name = "Twentyfourmodecheckbox";
-            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(79, 19);
+            this.Twentyfourmodecheckbox.Size = new System.Drawing.Size(128, 42);
             this.Twentyfourmodecheckbox.TabIndex = 5;
             this.Twentyfourmodecheckbox.Text = "24h mode";
             this.Twentyfourmodecheckbox.UseVisualStyleBackColor = false;
@@ -138,9 +144,10 @@ namespace TimeThing
             this.LocalTimeDisplay.AutoSize = true;
             this.LocalTimeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LocalTimeDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(174)))), ((int)(((byte)(173)))));
-            this.LocalTimeDisplay.Location = new System.Drawing.Point(296, 76);
+            this.LocalTimeDisplay.Location = new System.Drawing.Point(423, 127);
+            this.LocalTimeDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LocalTimeDisplay.Name = "LocalTimeDisplay";
-            this.LocalTimeDisplay.Size = new System.Drawing.Size(98, 37);
+            this.LocalTimeDisplay.Size = new System.Drawing.Size(145, 55);
             this.LocalTimeDisplay.TabIndex = 7;
             this.LocalTimeDisplay.Text = "00:00";
             // 
@@ -148,11 +155,12 @@ namespace TimeThing
             // 
             this.UnixLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.UnixLabel.AutoSize = true;
-            this.UnixLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UnixLabel.Font = new System.Drawing.Font("Rancho", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UnixLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(174)))), ((int)(((byte)(173)))));
-            this.UnixLabel.Location = new System.Drawing.Point(294, 422);
+            this.UnixLabel.Location = new System.Drawing.Point(420, 703);
+            this.UnixLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UnixLabel.Name = "UnixLabel";
-            this.UnixLabel.Size = new System.Drawing.Size(77, 30);
+            this.UnixLabel.Size = new System.Drawing.Size(118, 53);
             this.UnixLabel.TabIndex = 8;
             this.UnixLabel.Text = "Unix: {}";
             // 
@@ -162,9 +170,10 @@ namespace TimeThing
             this.CurrentTimeCheckBox.Checked = true;
             this.CurrentTimeCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CurrentTimeCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(174)))), ((int)(((byte)(173)))));
-            this.CurrentTimeCheckBox.Location = new System.Drawing.Point(294, 9);
+            this.CurrentTimeCheckBox.Location = new System.Drawing.Point(420, 11);
+            this.CurrentTimeCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CurrentTimeCheckBox.Name = "CurrentTimeCheckBox";
-            this.CurrentTimeCheckBox.Size = new System.Drawing.Size(100, 19);
+            this.CurrentTimeCheckBox.Size = new System.Drawing.Size(147, 29);
             this.CurrentTimeCheckBox.TabIndex = 0;
             this.CurrentTimeCheckBox.Text = "Current Times";
             this.CurrentTimeCheckBox.UseVisualStyleBackColor = true;
@@ -173,9 +182,11 @@ namespace TimeThing
             // ResetButton
             // 
             this.ResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetButton.Location = new System.Drawing.Point(1099, 430);
+            this.ResetButton.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResetButton.Location = new System.Drawing.Point(1570, 717);
+            this.ResetButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(75, 23);
+            this.ResetButton.Size = new System.Drawing.Size(107, 38);
             this.ResetButton.TabIndex = 7;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
@@ -188,8 +199,9 @@ namespace TimeThing
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(282, 460);
+            this.splitter1.Size = new System.Drawing.Size(402, 767);
             this.splitter1.TabIndex = 12;
             this.splitter1.TabStop = false;
             // 
@@ -198,10 +210,11 @@ namespace TimeThing
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
             this.pictureBox1.Image = global::TimeThing.Properties.Resources.image00000;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 413);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 688);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(53, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -212,13 +225,14 @@ namespace TimeThing
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Permanent Marker", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.label3.Location = new System.Drawing.Point(131, 422);
+            this.label3.Location = new System.Drawing.Point(194, 703);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 18);
+            this.label3.Size = new System.Drawing.Size(203, 26);
             this.label3.TabIndex = 14;
-            this.label3.Text = "©️ElectronDev 2021";
+            this.label3.Text = "©️ElectronDev 2022";
             this.label3.Click += new System.EventHandler(this.Copyright_Click);
             // 
             // OBTZ
@@ -226,22 +240,24 @@ namespace TimeThing
             this.OBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OBTZ.AutoSize = true;
             this.OBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
-            this.OBTZ.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OBTZ.Font = new System.Drawing.Font("Permanent Marker", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.OBTZ.Location = new System.Drawing.Point(9, 342);
+            this.OBTZ.Location = new System.Drawing.Point(13, 570);
+            this.OBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OBTZ.Name = "OBTZ";
-            this.OBTZ.Size = new System.Drawing.Size(161, 21);
+            this.OBTZ.Size = new System.Drawing.Size(320, 43);
             this.OBTZ.TabIndex = 16;
             this.OBTZ.Text = "Offset Timezone: 00";
             // 
             // LTZD
             // 
             this.LTZD.AutoSize = true;
-            this.LTZD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTZD.Font = new System.Drawing.Font("Annie Use Your Telescope", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LTZD.ForeColor = System.Drawing.Color.Silver;
-            this.LTZD.Location = new System.Drawing.Point(296, 165);
+            this.LTZD.Location = new System.Drawing.Point(423, 275);
+            this.LTZD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LTZD.Name = "LTZD";
-            this.LTZD.Size = new System.Drawing.Size(45, 21);
+            this.LTZD.Size = new System.Drawing.Size(85, 46);
             this.LTZD.TabIndex = 17;
             this.LTZD.Text = "LTZD";
             // 
@@ -249,19 +265,22 @@ namespace TimeThing
             // 
             this.OTZD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OTZD.AutoSize = true;
-            this.OTZD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OTZD.Font = new System.Drawing.Font("Annie Use Your Telescope", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OTZD.ForeColor = System.Drawing.Color.Silver;
-            this.OTZD.Location = new System.Drawing.Point(296, 366);
+            this.OTZD.Location = new System.Drawing.Point(423, 610);
+            this.OTZD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OTZD.Name = "OTZD";
-            this.OTZD.Size = new System.Drawing.Size(49, 21);
+            this.OTZD.Size = new System.Drawing.Size(84, 46);
             this.OTZD.TabIndex = 18;
             this.OTZD.Text = "OTZD";
             // 
             // BaseAddBtn
             // 
-            this.BaseAddBtn.Location = new System.Drawing.Point(12, 160);
+            this.BaseAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BaseAddBtn.Location = new System.Drawing.Point(17, 267);
+            this.BaseAddBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BaseAddBtn.Name = "BaseAddBtn";
-            this.BaseAddBtn.Size = new System.Drawing.Size(47, 23);
+            this.BaseAddBtn.Size = new System.Drawing.Size(67, 38);
             this.BaseAddBtn.TabIndex = 1;
             this.BaseAddBtn.Text = "Add";
             this.BaseAddBtn.UseVisualStyleBackColor = true;
@@ -270,9 +289,11 @@ namespace TimeThing
             // OffsetAddBtn
             // 
             this.OffsetAddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetAddBtn.Location = new System.Drawing.Point(12, 316);
+            this.OffsetAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OffsetAddBtn.Location = new System.Drawing.Point(17, 527);
+            this.OffsetAddBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetAddBtn.Name = "OffsetAddBtn";
-            this.OffsetAddBtn.Size = new System.Drawing.Size(47, 23);
+            this.OffsetAddBtn.Size = new System.Drawing.Size(67, 38);
             this.OffsetAddBtn.TabIndex = 3;
             this.OffsetAddBtn.Text = "Add";
             this.OffsetAddBtn.UseVisualStyleBackColor = true;
@@ -280,9 +301,11 @@ namespace TimeThing
             // 
             // BaseSubBtn
             // 
-            this.BaseSubBtn.Location = new System.Drawing.Point(65, 160);
+            this.BaseSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BaseSubBtn.Location = new System.Drawing.Point(93, 267);
+            this.BaseSubBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BaseSubBtn.Name = "BaseSubBtn";
-            this.BaseSubBtn.Size = new System.Drawing.Size(61, 23);
+            this.BaseSubBtn.Size = new System.Drawing.Size(87, 38);
             this.BaseSubBtn.TabIndex = 2;
             this.BaseSubBtn.Text = "Subtract";
             this.BaseSubBtn.UseVisualStyleBackColor = true;
@@ -291,9 +314,11 @@ namespace TimeThing
             // OffsetSubBtn
             // 
             this.OffsetSubBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetSubBtn.Location = new System.Drawing.Point(65, 316);
+            this.OffsetSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OffsetSubBtn.Location = new System.Drawing.Point(93, 527);
+            this.OffsetSubBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetSubBtn.Name = "OffsetSubBtn";
-            this.OffsetSubBtn.Size = new System.Drawing.Size(61, 23);
+            this.OffsetSubBtn.Size = new System.Drawing.Size(87, 38);
             this.OffsetSubBtn.TabIndex = 4;
             this.OffsetSubBtn.Text = "Subtract";
             this.OffsetSubBtn.UseVisualStyleBackColor = true;
@@ -302,11 +327,12 @@ namespace TimeThing
             // BaseDisplayText
             // 
             this.BaseDisplayText.AutoSize = true;
-            this.BaseDisplayText.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.BaseDisplayText.Font = new System.Drawing.Font("Shadows Into Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BaseDisplayText.ForeColor = System.Drawing.Color.Silver;
-            this.BaseDisplayText.Location = new System.Drawing.Point(298, 37);
+            this.BaseDisplayText.Location = new System.Drawing.Point(426, 45);
+            this.BaseDisplayText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BaseDisplayText.Name = "BaseDisplayText";
-            this.BaseDisplayText.Size = new System.Drawing.Size(228, 36);
+            this.BaseDisplayText.Size = new System.Drawing.Size(261, 77);
             this.BaseDisplayText.TabIndex = 23;
             this.BaseDisplayText.Text = "Base Display:";
             // 
@@ -314,20 +340,23 @@ namespace TimeThing
             // 
             this.OffsetDisplayText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OffsetDisplayText.AutoSize = true;
-            this.OffsetDisplayText.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.OffsetDisplayText.Font = new System.Drawing.Font("Shadows Into Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetDisplayText.ForeColor = System.Drawing.Color.Silver;
-            this.OffsetDisplayText.Location = new System.Drawing.Point(296, 242);
+            this.OffsetDisplayText.Location = new System.Drawing.Point(423, 386);
+            this.OffsetDisplayText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OffsetDisplayText.Name = "OffsetDisplayText";
-            this.OffsetDisplayText.Size = new System.Drawing.Size(255, 36);
+            this.OffsetDisplayText.Size = new System.Drawing.Size(282, 77);
             this.OffsetDisplayText.TabIndex = 24;
             this.OffsetDisplayText.Text = "Offset Display:";
             // 
             // WidgetOpen
             // 
             this.WidgetOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.WidgetOpen.Location = new System.Drawing.Point(12, 377);
+            this.WidgetOpen.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WidgetOpen.Location = new System.Drawing.Point(17, 628);
+            this.WidgetOpen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WidgetOpen.Name = "WidgetOpen";
-            this.WidgetOpen.Size = new System.Drawing.Size(75, 42);
+            this.WidgetOpen.Size = new System.Drawing.Size(107, 70);
             this.WidgetOpen.TabIndex = 6;
             this.WidgetOpen.Text = "Swap to\r\nWidget";
             this.WidgetOpen.UseVisualStyleBackColor = true;
@@ -339,9 +368,10 @@ namespace TimeThing
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::TimeThing.Properties.Resources.UTD_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 108);
+            this.pictureBox2.Size = new System.Drawing.Size(258, 180);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
@@ -350,9 +380,11 @@ namespace TimeThing
             // CustomiseBtn
             // 
             this.CustomiseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CustomiseBtn.Location = new System.Drawing.Point(12, 425);
+            this.CustomiseBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomiseBtn.Location = new System.Drawing.Point(17, 708);
+            this.CustomiseBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CustomiseBtn.Name = "CustomiseBtn";
-            this.CustomiseBtn.Size = new System.Drawing.Size(75, 23);
+            this.CustomiseBtn.Size = new System.Drawing.Size(107, 38);
             this.CustomiseBtn.TabIndex = 27;
             this.CustomiseBtn.Text = "Customise";
             this.CustomiseBtn.UseVisualStyleBackColor = true;
@@ -361,9 +393,11 @@ namespace TimeThing
             // CopyUnixBtn
             // 
             this.CopyUnixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CopyUnixBtn.Location = new System.Drawing.Point(1180, 430);
+            this.CopyUnixBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CopyUnixBtn.Location = new System.Drawing.Point(1686, 717);
+            this.CopyUnixBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CopyUnixBtn.Name = "CopyUnixBtn";
-            this.CopyUnixBtn.Size = new System.Drawing.Size(75, 23);
+            this.CopyUnixBtn.Size = new System.Drawing.Size(107, 38);
             this.CopyUnixBtn.TabIndex = 28;
             this.CopyUnixBtn.Text = "Copy Unix";
             this.CopyUnixBtn.UseVisualStyleBackColor = true;
@@ -372,11 +406,14 @@ namespace TimeThing
             // OffsetPicker
             // 
             this.OffsetPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OffsetPicker.CustomFormat = "MMMM dd, yyyy  |  hh:mm:ss";
+            this.OffsetPicker.CalendarFont = new System.Drawing.Font("Permanent Marker", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OffsetPicker.CustomFormat = "dd MMMM yyyy  |  hh:mm:ss";
+            this.OffsetPicker.Font = new System.Drawing.Font("Cambria Math", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OffsetPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OffsetPicker.Location = new System.Drawing.Point(1053, 289);
+            this.OffsetPicker.Location = new System.Drawing.Point(1361, 482);
+            this.OffsetPicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetPicker.Name = "OffsetPicker";
-            this.OffsetPicker.Size = new System.Drawing.Size(200, 23);
+            this.OffsetPicker.Size = new System.Drawing.Size(427, 33);
             this.OffsetPicker.TabIndex = 29;
             this.OffsetPicker.Visible = false;
             this.OffsetPicker.ValueChanged += new System.EventHandler(this.OffsetPicker_ValueChanged);
@@ -384,11 +421,14 @@ namespace TimeThing
             // BasePicker
             // 
             this.BasePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BasePicker.CustomFormat = "MMMM dd, yyyy  |  hh:mm:ss";
+            this.BasePicker.CalendarFont = new System.Drawing.Font("Permanent Marker", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BasePicker.CustomFormat = "dd MMMM yyyy  |  hh:mm:ss";
+            this.BasePicker.Font = new System.Drawing.Font("Cambria Math", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BasePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BasePicker.Location = new System.Drawing.Point(1053, 88);
+            this.BasePicker.Location = new System.Drawing.Point(1361, 147);
+            this.BasePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BasePicker.Name = "BasePicker";
-            this.BasePicker.Size = new System.Drawing.Size(200, 23);
+            this.BasePicker.Size = new System.Drawing.Size(427, 33);
             this.BasePicker.TabIndex = 30;
             this.BasePicker.Visible = false;
             this.BasePicker.ValueChanged += new System.EventHandler(this.BasePicker_ValueChanged);
@@ -406,11 +446,11 @@ namespace TimeThing
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(51)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1267, 460);
+            this.ClientSize = new System.Drawing.Size(1810, 767);
             this.Controls.Add(this.BasePicker);
             this.Controls.Add(this.OffsetPicker);
             this.Controls.Add(this.CopyUnixBtn);
@@ -440,9 +480,10 @@ namespace TimeThing
             this.Controls.Add(this.splitter1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1405, 628);
-            this.MinimumSize = new System.Drawing.Size(1075, 450);
+            this.MaximumSize = new System.Drawing.Size(1998, 1009);
+            this.MinimumSize = new System.Drawing.Size(1526, 713);
             this.Name = "Form1";
             this.Text = "Universal Time Display";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
