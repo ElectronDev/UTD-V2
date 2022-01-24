@@ -101,12 +101,12 @@ namespace TimeThing
             // 
             this.LBTZ.AutoSize = true;
             this.LBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
-            this.LBTZ.Font = new System.Drawing.Font("Permanent Marker", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBTZ.Font = new System.Drawing.Font("Permanent Marker", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.LBTZ.Location = new System.Drawing.Point(17, 310);
+            this.LBTZ.Location = new System.Drawing.Point(20, 310);
             this.LBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBTZ.Name = "LBTZ";
-            this.LBTZ.Size = new System.Drawing.Size(294, 43);
+            this.LBTZ.Size = new System.Drawing.Size(236, 35);
             this.LBTZ.TabIndex = 3;
             this.LBTZ.Text = "Base Timezone: 00";
             // 
@@ -240,12 +240,12 @@ namespace TimeThing
             this.OBTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OBTZ.AutoSize = true;
             this.OBTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
-            this.OBTZ.Font = new System.Drawing.Font("Permanent Marker", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OBTZ.Font = new System.Drawing.Font("Permanent Marker", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OBTZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.OBTZ.Location = new System.Drawing.Point(13, 570);
+            this.OBTZ.Location = new System.Drawing.Point(17, 570);
             this.OBTZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OBTZ.Name = "OBTZ";
-            this.OBTZ.Size = new System.Drawing.Size(320, 43);
+            this.OBTZ.Size = new System.Drawing.Size(258, 35);
             this.OBTZ.TabIndex = 16;
             this.OBTZ.Text = "Offset Timezone: 00";
             // 
