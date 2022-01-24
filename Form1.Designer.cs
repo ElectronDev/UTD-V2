@@ -182,11 +182,11 @@ namespace TimeThing
             // ResetButton
             // 
             this.ResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetButton.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ResetButton.Location = new System.Drawing.Point(1570, 717);
+            this.ResetButton.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResetButton.Location = new System.Drawing.Point(1535, 703);
             this.ResetButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(107, 38);
+            this.ResetButton.Size = new System.Drawing.Size(125, 53);
             this.ResetButton.TabIndex = 7;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
@@ -225,12 +225,12 @@ namespace TimeThing
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Permanent Marker", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Permanent Marker", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.label3.Location = new System.Drawing.Point(194, 703);
+            this.label3.Location = new System.Drawing.Point(187, 703);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 26);
+            this.label3.Size = new System.Drawing.Size(205, 28);
             this.label3.TabIndex = 14;
             this.label3.Text = "©️ElectronDev 2022";
             this.label3.Click += new System.EventHandler(this.Copyright_Click);
@@ -276,11 +276,11 @@ namespace TimeThing
             // 
             // BaseAddBtn
             // 
-            this.BaseAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BaseAddBtn.Location = new System.Drawing.Point(17, 267);
+            this.BaseAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BaseAddBtn.Location = new System.Drawing.Point(20, 264);
             this.BaseAddBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BaseAddBtn.Name = "BaseAddBtn";
-            this.BaseAddBtn.Size = new System.Drawing.Size(67, 38);
+            this.BaseAddBtn.Size = new System.Drawing.Size(90, 41);
             this.BaseAddBtn.TabIndex = 1;
             this.BaseAddBtn.Text = "Add";
             this.BaseAddBtn.UseVisualStyleBackColor = true;
@@ -289,11 +289,11 @@ namespace TimeThing
             // OffsetAddBtn
             // 
             this.OffsetAddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OffsetAddBtn.Location = new System.Drawing.Point(17, 527);
+            this.OffsetAddBtn.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OffsetAddBtn.Location = new System.Drawing.Point(17, 524);
             this.OffsetAddBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetAddBtn.Name = "OffsetAddBtn";
-            this.OffsetAddBtn.Size = new System.Drawing.Size(67, 38);
+            this.OffsetAddBtn.Size = new System.Drawing.Size(90, 41);
             this.OffsetAddBtn.TabIndex = 3;
             this.OffsetAddBtn.Text = "Add";
             this.OffsetAddBtn.UseVisualStyleBackColor = true;
@@ -301,11 +301,11 @@ namespace TimeThing
             // 
             // BaseSubBtn
             // 
-            this.BaseSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BaseSubBtn.Location = new System.Drawing.Point(93, 267);
+            this.BaseSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BaseSubBtn.Location = new System.Drawing.Point(118, 264);
             this.BaseSubBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BaseSubBtn.Name = "BaseSubBtn";
-            this.BaseSubBtn.Size = new System.Drawing.Size(87, 38);
+            this.BaseSubBtn.Size = new System.Drawing.Size(115, 41);
             this.BaseSubBtn.TabIndex = 2;
             this.BaseSubBtn.Text = "Subtract";
             this.BaseSubBtn.UseVisualStyleBackColor = true;
@@ -314,11 +314,11 @@ namespace TimeThing
             // OffsetSubBtn
             // 
             this.OffsetSubBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OffsetSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OffsetSubBtn.Location = new System.Drawing.Point(93, 527);
+            this.OffsetSubBtn.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OffsetSubBtn.Location = new System.Drawing.Point(115, 524);
             this.OffsetSubBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OffsetSubBtn.Name = "OffsetSubBtn";
-            this.OffsetSubBtn.Size = new System.Drawing.Size(87, 38);
+            this.OffsetSubBtn.Size = new System.Drawing.Size(115, 41);
             this.OffsetSubBtn.TabIndex = 4;
             this.OffsetSubBtn.Text = "Subtract";
             this.OffsetSubBtn.UseVisualStyleBackColor = true;
@@ -393,11 +393,11 @@ namespace TimeThing
             // CopyUnixBtn
             // 
             this.CopyUnixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CopyUnixBtn.Font = new System.Drawing.Font("Shadows Into Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CopyUnixBtn.Location = new System.Drawing.Point(1686, 717);
+            this.CopyUnixBtn.Font = new System.Drawing.Font("Shadows Into Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CopyUnixBtn.Location = new System.Drawing.Point(1668, 702);
             this.CopyUnixBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CopyUnixBtn.Name = "CopyUnixBtn";
-            this.CopyUnixBtn.Size = new System.Drawing.Size(107, 38);
+            this.CopyUnixBtn.Size = new System.Drawing.Size(125, 53);
             this.CopyUnixBtn.TabIndex = 28;
             this.CopyUnixBtn.Text = "Copy Unix";
             this.CopyUnixBtn.UseVisualStyleBackColor = true;
